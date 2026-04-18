@@ -13,7 +13,6 @@
 //! ```
 
 use clap::{Parser, Subcommand};
-use impforge_emergence::Orchestrator;
 use std::sync::Arc;
 
 mod commands;

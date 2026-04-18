@@ -16,7 +16,7 @@
 //! - The Ed25519 keypair is generated on first use and stored in
 //!   `~/.impforge-cli/keys/`.
 
-use impforge_core::{paths, CoreError, CoreResult};
+use impforge_core::{paths, CoreResult};
 use impforge_emergence::{
     Capability, CapabilityCost, HealthReport, MemoryEntry, MemoryEntryKind, Module, PowerMode,
 };

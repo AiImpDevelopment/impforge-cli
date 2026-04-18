@@ -74,7 +74,7 @@ fn summary_of(tool: &'static str) -> &'static str {
 }
 
 pub fn advertised_tokens() -> u32 {
-    TOOL_DESCRIPTORS.iter().map(|t| 40_u32).sum()
+    TOOL_DESCRIPTORS.iter().map(|_| 40_u32).sum()
 }
 
 pub fn full_expansion_tokens() -> u32 {

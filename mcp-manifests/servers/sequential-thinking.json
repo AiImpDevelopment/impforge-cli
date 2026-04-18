@@ -1,0 +1,14 @@
+{
+  "id": "sequential-thinking",
+  "name": "Sequential Thinking MCP",
+  "description": "Chain-of-thought reasoning scratchpad.  Lets the AI break problems into numbered steps with revision support.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+  "url": null,
+  "tools": ["sequentialthinking"],
+  "license": "MIT",
+  "category": "reasoning",
+  "maintainer": "modelcontextprotocol",
+  "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking"
+}

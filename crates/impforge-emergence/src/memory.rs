@@ -9,7 +9,7 @@ use std::sync::{Mutex, MutexGuard};
 
 const MAX_ENTRIES: usize = 2_000;
 
-#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct MemoryEntry {
     pub module_id: String,

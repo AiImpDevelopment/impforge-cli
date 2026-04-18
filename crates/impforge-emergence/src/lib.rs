@@ -23,8 +23,8 @@ pub mod memory;
 pub mod module;
 pub mod orchestrator;
 
-pub use capability::{Capability, CapabilityRequest, CapabilityResponse};
+pub use capability::{Capability, CapabilityCost, CapabilityRequest, CapabilityResponse};
 pub use health::{HealthReport, HealthState};
-pub use memory::{MemoryEntry, MemoryStore};
-pub use module::Module;
-pub use orchestrator::Orchestrator;
+pub use memory::{MemoryEntry, MemoryEntryKind, MemoryStore};
+pub use module::{Module, PowerMode};
+pub use orchestrator::{ModuleSnapshot, Orchestrator, OrchestratorSnapshot};

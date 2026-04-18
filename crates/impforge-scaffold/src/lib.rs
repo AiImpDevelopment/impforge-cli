@@ -8,10 +8,39 @@
 //! lives inside the source template.
 
 use impforge_core::{CoreError, CoreResult, TemplateManifest};
+use impforge_emergence::{
+    Capability, CapabilityCost, HealthReport, MemoryEntry, MemoryEntryKind, Module, PowerMode,
+};
 use sha2::{Digest, Sha256};
 use std::fs;
 use std::path::{Path, PathBuf};
 use walkdir::WalkDir;
+
+/// Singleton Module implementer for `impforge-scaffold`.
+pub struct Module_;
+
+impl Module for Module_ {
+    fn id(&self) -> &'static str { "impforge-scaffold" }
+    fn description(&self) -> &'static str { "Template scaffolding engine" }
+    fn capabilities(&self) -> Vec<Capability> {
+        vec![
+            Capability::new("scaffold-template", "copy template into target dir", CapabilityCost::Low),
+            Capability::new("list-templates", "list bundled template ids", CapabilityCost::Zero),
+        ]
+    }
+    fn health(&self) -> HealthReport { HealthReport::healthy("idle", 0) }
+    fn power_mode(&self) -> PowerMode { PowerMode::DeepSleep }
+    fn self_heal(&self) -> MemoryEntry {
+        MemoryEntry {
+            module_id: "impforge-scaffold".to_string(),
+            kind: MemoryEntryKind::SelfHeal,
+            summary: "no-op (stateless copier)".to_string(),
+            details: None,
+            occurred_at_unix: 0,
+            quality: 1.0,
+        }
+    }
+}
 
 pub fn scaffold_template(
     templates_root: &Path,

@@ -119,8 +119,10 @@ mod tests {
 
     #[test]
     fn bad_interval_rejected() {
-        let mut c = CliConfig::default();
-        c.update_check_interval_hours = 10_000;
+        let c = CliConfig {
+            update_check_interval_hours: 10_000,
+            ..CliConfig::default()
+        };
         assert!(c.validate().is_err());
     }
 

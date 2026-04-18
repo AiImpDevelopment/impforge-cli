@@ -1,0 +1,14 @@
+{
+  "id": "github",
+  "name": "GitHub MCP",
+  "description": "Official MCP server for GitHub API: issues, PRs, repos, code search.  Requires GITHUB_TOKEN env var.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@modelcontextprotocol/server-github"],
+  "url": null,
+  "tools": ["create_issue", "list_issues", "create_pull_request", "get_file_contents", "search_code", "list_repos"],
+  "license": "MIT",
+  "category": "vcs",
+  "maintainer": "modelcontextprotocol",
+  "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/github"
+}

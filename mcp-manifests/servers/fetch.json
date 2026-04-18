@@ -1,0 +1,14 @@
+{
+  "id": "fetch",
+  "name": "Fetch MCP",
+  "description": "Official MCP server for HTTP fetch: GET / POST / PUT with robot-politeness (robots.txt respecting).",
+  "transport": "stdio",
+  "command": "uvx",
+  "args": ["mcp-server-fetch"],
+  "url": null,
+  "tools": ["fetch"],
+  "license": "MIT",
+  "category": "network",
+  "maintainer": "modelcontextprotocol",
+  "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch"
+}

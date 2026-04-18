@@ -9,10 +9,11 @@ use serde::{Deserialize, Serialize};
 /// Power modes for a module — directly mirrors ImpForge's
 /// `module_lifecycle` pattern.  The default after install is `DeepSleep`
 /// for every module, so the CLI consumes almost zero memory when idle.
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default, Serialize, Deserialize)]
 #[serde(rename_all = "snake_case")]
 pub enum PowerMode {
     /// <1 MB, zero background CPU.  Metadata only.
+    #[default]
     DeepSleep,
     /// <5 MB, lazy-loaded state.  Ready to wake quickly.
     Idle,
@@ -20,12 +21,6 @@ pub enum PowerMode {
     Active,
     /// Fully loaded + warm caches + worker threads spun up.
     Full,
-}
-
-impl Default for PowerMode {
-    fn default() -> Self {
-        PowerMode::DeepSleep
-    }
 }
 
 impl PowerMode {

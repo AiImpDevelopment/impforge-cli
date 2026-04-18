@@ -13,6 +13,7 @@ readme = "../../README.md"
 
 [dependencies]
 impforge-core = { path = "../impforge-core" }
+impforge-emergence = { path = "../impforge-emergence" }
 serde = { workspace = true }
 serde_json = { workspace = true }
 walkdir = { workspace = true }

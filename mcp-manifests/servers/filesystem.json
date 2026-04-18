@@ -1,0 +1,14 @@
+{
+  "id": "filesystem",
+  "name": "Filesystem MCP",
+  "description": "Official MCP server for secure filesystem access with fine-grained permissions. Read/write/list files, glob search, directory manipulation.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@modelcontextprotocol/server-filesystem"],
+  "url": null,
+  "tools": ["read_file", "write_file", "list_directory", "search_files", "create_directory", "delete_file"],
+  "license": "MIT",
+  "category": "filesystem",
+  "maintainer": "modelcontextprotocol",
+  "upstream": "https://github.com/modelcontextprotocol/servers"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "brave-search",
+  "name": "Brave Search MCP",
+  "description": "Web + local search via Brave Search API.  Privacy-first, no tracking.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@modelcontextprotocol/server-brave-search"],
+  "url": null,
+  "tools": ["brave_web_search", "brave_local_search"],
+  "license": "MIT",
+  "category": "search",
+  "maintainer": "modelcontextprotocol",
+  "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/brave-search"
+}

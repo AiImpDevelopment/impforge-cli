@@ -200,7 +200,7 @@ pub struct OrchestratorSnapshot {
 mod tests {
     use super::*;
     use crate::capability::{Capability, CapabilityCost};
-    use crate::health::{HealthReport, HealthState};
+    use crate::health::HealthReport;
 
     struct DummyModule;
 

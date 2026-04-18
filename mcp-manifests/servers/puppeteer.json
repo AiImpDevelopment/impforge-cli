@@ -1,0 +1,14 @@
+{
+  "id": "puppeteer",
+  "name": "Puppeteer MCP",
+  "description": "Official MCP server for browser automation via Puppeteer: navigate, click, screenshot, evaluate JS.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@modelcontextprotocol/server-puppeteer"],
+  "url": null,
+  "tools": ["navigate", "screenshot", "click", "fill", "select", "hover", "evaluate"],
+  "license": "MIT",
+  "category": "browser",
+  "maintainer": "modelcontextprotocol",
+  "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer"
+}

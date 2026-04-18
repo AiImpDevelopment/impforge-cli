@@ -1,0 +1,14 @@
+{
+  "id": "git",
+  "name": "Git MCP",
+  "description": "Official MCP server for git operations: log, diff, status, branches, commits.  Read-only by default for safety.",
+  "transport": "stdio",
+  "command": "uvx",
+  "args": ["mcp-server-git", "--repository", "."],
+  "url": null,
+  "tools": ["git_log", "git_diff", "git_status", "git_show", "git_branch"],
+  "license": "MIT",
+  "category": "vcs",
+  "maintainer": "modelcontextprotocol",
+  "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/git"
+}

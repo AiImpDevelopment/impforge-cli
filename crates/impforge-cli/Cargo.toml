@@ -48,6 +48,7 @@ thiserror = { workspace = true }
 tracing = { workspace = true }
 tracing-subscriber = { workspace = true }
 chrono = { workspace = true }
+dirs = { workspace = true }
 
 # Optional TUI
 ratatui = { workspace = true, optional = true }

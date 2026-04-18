@@ -105,7 +105,8 @@ mod tests {
     #[test]
     fn capabilities_include_list_and_run() {
         let m = Module_;
-        let tags: Vec<&str> = m.capabilities().iter().map(|c| c.tag.as_str()).collect();
+        let caps = m.capabilities();
+        let tags: Vec<&str> = caps.iter().map(|c| c.tag.as_str()).collect();
         assert!(tags.contains(&"model-list"));
         assert!(tags.contains(&"model-run"));
     }

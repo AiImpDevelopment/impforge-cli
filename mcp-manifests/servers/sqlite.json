@@ -1,0 +1,14 @@
+{
+  "id": "sqlite",
+  "name": "SQLite MCP",
+  "description": "Official MCP server for SQLite databases: schema inspection, SELECT queries, write operations (opt-in).",
+  "transport": "stdio",
+  "command": "uvx",
+  "args": ["mcp-server-sqlite", "--db-path", "./dev.db"],
+  "url": null,
+  "tools": ["list_tables", "describe_table", "read_query", "write_query", "create_table", "append_insight"],
+  "license": "MIT",
+  "category": "database",
+  "maintainer": "modelcontextprotocol",
+  "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/sqlite"
+}
