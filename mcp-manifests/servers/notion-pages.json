@@ -1,0 +1,14 @@
+{
+  "id": "notion-pages",
+  "name": "Notion Pages MCP (extended)",
+  "description": "Deep Notion integration — databases, properties, blocks, file uploads, sync. Complements the base notion.json server.  Requires NOTION_TOKEN.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@makenotion/notion-mcp-server"],
+  "url": null,
+  "tools": ["query_database", "create_page", "update_page", "list_databases", "append_blocks", "upload_file"],
+  "license": "MIT",
+  "category": "notes",
+  "maintainer": "makenotion",
+  "upstream": "https://github.com/makenotion/notion-mcp-server"
+}

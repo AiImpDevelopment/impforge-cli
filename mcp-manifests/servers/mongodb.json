@@ -1,0 +1,14 @@
+{
+  "id": "mongodb",
+  "name": "MongoDB MCP",
+  "description": "Query collections, insert/update docs, build aggregation pipelines, manage indexes. Requires MONGODB_URI.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@mongodb/mcp-server"],
+  "url": null,
+  "tools": ["find", "insert_one", "update_one", "aggregate", "create_index", "list_collections"],
+  "license": "Apache-2.0",
+  "category": "database",
+  "maintainer": "mongodb",
+  "upstream": "https://github.com/mongodb/mcp-server"
+}

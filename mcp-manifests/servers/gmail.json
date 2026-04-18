@@ -1,0 +1,14 @@
+{
+  "id": "gmail",
+  "name": "Gmail MCP",
+  "description": "Read, search, send, and organise Gmail messages via the Google API. Perfect for non-tech users: 'Show me emails from last week' just works.  Requires GOOGLE_API_KEY or OAuth.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@gongrzhe/server-gmail-autoauth-mcp"],
+  "url": null,
+  "tools": ["list_messages", "get_message", "send_email", "search_messages", "create_draft", "modify_labels"],
+  "license": "MIT",
+  "category": "communication",
+  "maintainer": "gongrzhe",
+  "upstream": "https://github.com/gongrzhe/server-gmail-autoauth-mcp"
+}

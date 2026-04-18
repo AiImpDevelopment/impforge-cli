@@ -1,0 +1,14 @@
+{
+  "id": "elasticsearch",
+  "name": "Elasticsearch MCP",
+  "description": "Full-text search, aggregations, index management. Compatible with OpenSearch.  Requires ELASTICSEARCH_URL + API key.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@elastic/mcp-server"],
+  "url": null,
+  "tools": ["search", "index_document", "aggregate", "create_index", "bulk_index", "delete_by_query"],
+  "license": "Elastic-2.0",
+  "category": "search",
+  "maintainer": "elastic",
+  "upstream": "https://github.com/elastic/mcp-server"
+}

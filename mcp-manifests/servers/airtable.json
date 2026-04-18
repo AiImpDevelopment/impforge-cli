@@ -1,0 +1,14 @@
+{
+  "id": "airtable",
+  "name": "Airtable MCP",
+  "description": "No-code database for non-techies: list + create + update + delete records, run formulas, manage views. Requires AIRTABLE_API_KEY.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@domdomegg/airtable-mcp-server"],
+  "url": null,
+  "tools": ["list_records", "create_record", "update_record", "delete_record", "list_bases", "list_tables"],
+  "license": "MIT",
+  "category": "database",
+  "maintainer": "domdomegg",
+  "upstream": "https://github.com/domdomegg/airtable-mcp-server"
+}

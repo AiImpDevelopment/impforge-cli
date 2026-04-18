@@ -1,0 +1,14 @@
+{
+  "id": "qdrant",
+  "name": "Qdrant Vector DB MCP",
+  "description": "Rust-native vector DB: fast similarity search, sparse + dense, multi-tenant. Self-hosted or cloud. Requires QDRANT_URL.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@qdrant/mcp-server"],
+  "url": null,
+  "tools": ["upsert_points", "search_points", "create_collection", "delete_points", "scroll_points", "count_points"],
+  "license": "Apache-2.0",
+  "category": "vector-database",
+  "maintainer": "qdrant",
+  "upstream": "https://github.com/qdrant/mcp-server"
+}

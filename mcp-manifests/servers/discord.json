@@ -1,0 +1,14 @@
+{
+  "id": "discord",
+  "name": "Discord MCP",
+  "description": "Read channel messages, send messages, manage servers, roles, reactions. Bot token required (DISCORD_TOKEN).",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@barryyip0625/mcp-discord"],
+  "url": null,
+  "tools": ["send_message", "read_channel", "list_channels", "add_reaction", "list_members", "create_thread"],
+  "license": "MIT",
+  "category": "communication",
+  "maintainer": "barryyip0625",
+  "upstream": "https://github.com/barryyip0625/mcp-discord"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "telegram",
+  "name": "Telegram MCP",
+  "description": "Send messages, photos, documents via Telegram Bot API. Requires TELEGRAM_BOT_TOKEN + chat_id.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@chaindead/telegram-mcp"],
+  "url": null,
+  "tools": ["send_message", "send_photo", "send_document", "get_updates", "edit_message", "delete_message"],
+  "license": "MIT",
+  "category": "communication",
+  "maintainer": "chaindead",
+  "upstream": "https://github.com/chaindead/telegram-mcp"
+}

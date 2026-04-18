@@ -1,0 +1,14 @@
+{
+  "id": "figma",
+  "name": "Figma MCP",
+  "description": "Read design files, extract components, generate code from frames. Critical for designer ↔ developer AI workflows. Requires FIGMA_TOKEN.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@figma/mcp-server"],
+  "url": null,
+  "tools": ["get_file", "list_components", "extract_code_from_frame", "list_teams", "get_comments"],
+  "license": "MIT",
+  "category": "design",
+  "maintainer": "figma",
+  "upstream": "https://github.com/figma/mcp-server"
+}

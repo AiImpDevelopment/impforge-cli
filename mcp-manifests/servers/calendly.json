@@ -1,0 +1,14 @@
+{
+  "id": "calendly",
+  "name": "Calendly MCP",
+  "description": "Schedule meetings via Calendly: list event types, list bookings, create scheduling links. Requires CALENDLY_TOKEN.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@calendly/mcp-server"],
+  "url": null,
+  "tools": ["list_event_types", "list_bookings", "create_scheduling_link", "cancel_booking", "get_availability"],
+  "license": "MIT",
+  "category": "productivity",
+  "maintainer": "calendly",
+  "upstream": "https://github.com/calendly/mcp-server"
+}

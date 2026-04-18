@@ -1,0 +1,14 @@
+{
+  "id": "obsidian",
+  "name": "Obsidian MCP",
+  "description": "Read + write notes in an Obsidian vault. Wiki-links, front-matter, search, tags. Great for second-brain workflows.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@smithery-ai/mcp-obsidian"],
+  "url": null,
+  "tools": ["read_note", "create_note", "update_note", "search_vault", "list_tags", "list_backlinks"],
+  "license": "MIT",
+  "category": "notes",
+  "maintainer": "smithery-ai",
+  "upstream": "https://github.com/smithery-ai/mcp-obsidian"
+}

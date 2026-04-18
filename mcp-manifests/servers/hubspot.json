@@ -1,0 +1,14 @@
+{
+  "id": "hubspot",
+  "name": "HubSpot CRM MCP",
+  "description": "Contacts, deals, companies, tickets, email workflows. Marketing-tech stack for non-techies. Requires HUBSPOT_ACCESS_TOKEN.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@hubspot/mcp-server"],
+  "url": null,
+  "tools": ["list_contacts", "create_contact", "list_deals", "create_deal", "list_tickets", "send_email"],
+  "license": "MIT",
+  "category": "crm",
+  "maintainer": "hubspot",
+  "upstream": "https://github.com/HubSpot/mcp-server"
+}

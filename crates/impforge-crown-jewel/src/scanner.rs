@@ -3,6 +3,7 @@
 //! level checks for Dimensions 4 and 5.
 
 use crate::dims;
+use crate::kind_routing;
 use crate::report::{CrownJewelReport, Dimension, DimensionTotals};
 use std::path::{Path, PathBuf};
 use walkdir::WalkDir;
@@ -46,6 +47,10 @@ pub fn scan<P: AsRef<Path>>(root: P) -> anyhow::Result<CrownJewelReport> {
             let pub_items = extract_pub_items(&content);
             let test_names = extract_test_names(&content);
             findings.extend(dims::dim4_test_first(entry.path(), &pub_items, &test_names));
+
+            // Dimension 8: kind-based routing — only Rust for now (the types
+            // system is strong enough to express MessageKind natively).
+            findings.extend(kind_routing::scan_rust_file(entry.path(), &content));
         }
     }
 
@@ -91,6 +96,7 @@ fn tally(findings: &[crate::report::CrownJewelFinding]) -> DimensionTotals {
             Dimension::CrownJewelWiring => t.crown_jewel_wiring += 1,
             Dimension::ParallelEfficiency => t.parallel_efficiency += 1,
             Dimension::ErrorRecall => t.error_recall += 1,
+            Dimension::KindRouting => t.kind_routing += 1,
         }
     }
     t

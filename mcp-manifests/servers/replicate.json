@@ -1,0 +1,14 @@
+{
+  "id": "replicate",
+  "name": "Replicate MCP",
+  "description": "Run any open-source ML model on Replicate (Flux, SDXL, Whisper, Llama). Image gen, video gen, audio. Requires REPLICATE_API_TOKEN.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@replicate/mcp-server"],
+  "url": null,
+  "tools": ["run_model", "list_models", "get_prediction", "cancel_prediction", "list_trainings"],
+  "license": "Apache-2.0",
+  "category": "ai-llm",
+  "maintainer": "replicate",
+  "upstream": "https://github.com/replicate/mcp-server"
+}

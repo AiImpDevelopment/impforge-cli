@@ -1,0 +1,14 @@
+{
+  "id": "google-docs",
+  "name": "Google Docs MCP",
+  "description": "Read, create, edit Google Docs programmatically. AI can now draft a full document inside your Drive.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@google/docs-mcp-server"],
+  "url": null,
+  "tools": ["create_document", "get_document", "update_document", "append_text", "insert_image", "export_as_pdf"],
+  "license": "Apache-2.0",
+  "category": "productivity",
+  "maintainer": "google",
+  "upstream": "https://github.com/google-workspace/mcp-servers"
+}

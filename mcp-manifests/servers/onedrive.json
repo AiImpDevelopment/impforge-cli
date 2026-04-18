@@ -1,0 +1,14 @@
+{
+  "id": "onedrive",
+  "name": "OneDrive MCP",
+  "description": "Microsoft OneDrive integration — list, upload, download, share. Works with personal + Microsoft 365. Requires MS_GRAPH_TOKEN.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@microsoft/onedrive-mcp"],
+  "url": null,
+  "tools": ["list_drive", "upload_file", "download_file", "share_item", "search_files", "get_file_metadata"],
+  "license": "MIT",
+  "category": "cloud-storage",
+  "maintainer": "microsoft",
+  "upstream": "https://github.com/microsoft/mcp-servers"
+}

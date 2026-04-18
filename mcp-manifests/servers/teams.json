@@ -1,0 +1,14 @@
+{
+  "id": "teams",
+  "name": "Microsoft Teams MCP",
+  "description": "Post to Teams channels, read threads, schedule meetings via Microsoft Graph. Requires MS_GRAPH_TOKEN.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@microsoft/teams-mcp"],
+  "url": null,
+  "tools": ["send_channel_message", "list_teams", "list_channels", "create_meeting", "read_thread", "reply_to_thread"],
+  "license": "MIT",
+  "category": "communication",
+  "maintainer": "microsoft",
+  "upstream": "https://github.com/microsoft/mcp-servers"
+}

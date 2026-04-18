@@ -1,0 +1,14 @@
+{
+  "id": "jira",
+  "name": "Atlassian JIRA MCP",
+  "description": "Issue tracking, sprints, boards, JQL queries. Cloud + Server. Requires JIRA_URL + JIRA_API_TOKEN.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@atlassian/jira-mcp"],
+  "url": null,
+  "tools": ["create_issue", "search_issues", "update_issue", "list_sprints", "transition_issue", "add_comment"],
+  "license": "MIT",
+  "category": "project-management",
+  "maintainer": "atlassian",
+  "upstream": "https://github.com/atlassian/mcp-server"
+}

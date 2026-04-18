@@ -14,6 +14,11 @@ pub enum Dimension {
     CrownJewelWiring,
     ParallelEfficiency,
     ErrorRecall,
+    /// Dim 8 — every typed-message dispatcher (hub / bus / router) must
+    /// inspect the message's `kind` / `MessageKind` / `Direction` before
+    /// choosing a recipient.  Blind `for transport in all_transports` fan-out
+    /// is a Crown-Jewel violation.
+    KindRouting,
 }
 
 impl Dimension {
@@ -26,6 +31,7 @@ impl Dimension {
             Dimension::CrownJewelWiring => "crown_jewel_wiring",
             Dimension::ParallelEfficiency => "parallel_efficiency",
             Dimension::ErrorRecall => "error_recall",
+            Dimension::KindRouting => "kind_routing",
         }
     }
 }
@@ -76,6 +82,7 @@ pub struct DimensionTotals {
     pub crown_jewel_wiring: usize,
     pub parallel_efficiency: usize,
     pub error_recall: usize,
+    pub kind_routing: usize,
 }
 
 impl CrownJewelReport {

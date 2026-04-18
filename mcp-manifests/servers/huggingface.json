@@ -1,0 +1,14 @@
+{
+  "id": "huggingface",
+  "name": "HuggingFace Hub MCP",
+  "description": "Search models, datasets, spaces on HuggingFace. Download models, run inference via Inference API. Requires HF_TOKEN (free tier works).",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@huggingface/mcp-server"],
+  "url": null,
+  "tools": ["search_models", "get_model_info", "run_inference", "search_datasets", "list_spaces"],
+  "license": "Apache-2.0",
+  "category": "ai-llm",
+  "maintainer": "huggingface",
+  "upstream": "https://github.com/huggingface/mcp-server"
+}

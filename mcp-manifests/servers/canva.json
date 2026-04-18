@@ -1,0 +1,14 @@
+{
+  "id": "canva",
+  "name": "Canva MCP",
+  "description": "Create designs, apply brand kits, export PNGs/PDFs programmatically. Non-tech marketers build landing-page assets from AI prompts. Requires CANVA_API_KEY.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@canva/mcp-server"],
+  "url": null,
+  "tools": ["create_design", "export_design", "list_brand_kits", "apply_template", "update_design"],
+  "license": "MIT",
+  "category": "design",
+  "maintainer": "canva",
+  "upstream": "https://github.com/canva-public/mcp-server"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "shopify",
+  "name": "Shopify MCP",
+  "description": "Products, orders, customers, inventory, webhooks.  E-commerce automation for non-tech store owners. Requires SHOPIFY_STORE + SHOPIFY_ACCESS_TOKEN.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@shopify/mcp-server"],
+  "url": null,
+  "tools": ["list_products", "create_product", "list_orders", "fulfill_order", "update_inventory", "list_customers"],
+  "license": "MIT",
+  "category": "ecommerce",
+  "maintainer": "shopify",
+  "upstream": "https://github.com/shopify/mcp-server"
+}

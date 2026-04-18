@@ -1,0 +1,14 @@
+{
+  "id": "google-sheets",
+  "name": "Google Sheets MCP",
+  "description": "Read/write cells, create sheets, run formulas, pivot tables. Non-tech users ask in plain language, AI fills the sheet.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@google/sheets-mcp-server"],
+  "url": null,
+  "tools": ["read_range", "write_range", "create_sheet", "append_row", "apply_formula", "create_chart"],
+  "license": "Apache-2.0",
+  "category": "productivity",
+  "maintainer": "google",
+  "upstream": "https://github.com/google-workspace/mcp-servers"
+}

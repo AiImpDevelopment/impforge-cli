@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-//! `impforge-cli crown-jewel` — run the 5-dimension quality gate.
+//! `impforge-cli crown-jewel` — run the 8-dimension quality gate.
 
 use crate::theme;
 use clap::Subcommand;
@@ -105,6 +105,7 @@ fn print_summary(report: &impforge_crown_jewel::CrownJewelReport) {
     println!("  (5) crown_jewel_wiring    {:>6}", report.dimension_totals.crown_jewel_wiring);
     println!("  (6) parallel_efficiency   {:>6}", report.dimension_totals.parallel_efficiency);
     println!("  (7) error_recall          {:>6}", report.dimension_totals.error_recall);
+    println!("  (8) kind_routing          {:>6}", report.dimension_totals.kind_routing);
     println!();
     for f in report.findings.iter().take(20) {
         let color = match f.severity {
@@ -146,6 +147,7 @@ fn dim_label(d: Dimension) -> &'static str {
         Dimension::CrownJewelWiring => "orphan",
         Dimension::ParallelEfficiency => "idle-wait",
         Dimension::ErrorRecall => "regression",
+        Dimension::KindRouting => "blind-dispatch",
     }
 }
 

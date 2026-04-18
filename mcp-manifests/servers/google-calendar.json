@@ -1,0 +1,14 @@
+{
+  "id": "google-calendar",
+  "name": "Google Calendar MCP",
+  "description": "Schedule, list, update, and delete calendar events. Supports recurring events, reminders, and free/busy queries.  Requires Google OAuth.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@cocal/google-calendar-mcp"],
+  "url": null,
+  "tools": ["list_events", "create_event", "update_event", "delete_event", "find_free_slots", "check_availability"],
+  "license": "MIT",
+  "category": "productivity",
+  "maintainer": "cocal",
+  "upstream": "https://github.com/cocal/google-calendar-mcp"
+}

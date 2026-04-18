@@ -1,0 +1,14 @@
+{
+  "id": "zoom",
+  "name": "Zoom MCP",
+  "description": "Schedule meetings, get recordings, list participants, create cloud recordings. Requires ZOOM_JWT_TOKEN.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@zoom/mcp-server"],
+  "url": null,
+  "tools": ["schedule_meeting", "list_meetings", "get_recording", "list_participants", "update_meeting", "delete_meeting"],
+  "license": "Apache-2.0",
+  "category": "communication",
+  "maintainer": "zoom",
+  "upstream": "https://github.com/zoom/mcp-server"
+}

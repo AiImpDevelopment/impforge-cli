@@ -1,0 +1,14 @@
+{
+  "id": "dropbox",
+  "name": "Dropbox MCP",
+  "description": "List, upload, download, move, share Dropbox files. Works with personal + Business accounts. Requires DROPBOX_ACCESS_TOKEN.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@dropbox/mcp-server"],
+  "url": null,
+  "tools": ["list_folder", "upload_file", "download_file", "get_shared_link", "move_file", "search_files"],
+  "license": "MIT",
+  "category": "cloud-storage",
+  "maintainer": "dropbox",
+  "upstream": "https://github.com/dropbox/mcp-server"
+}

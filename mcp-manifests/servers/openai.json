@@ -1,0 +1,14 @@
+{
+  "id": "openai",
+  "name": "OpenAI MCP",
+  "description": "GPT-4o / o1 completions, embeddings, image generation (DALL·E), Whisper transcription. Requires OPENAI_API_KEY.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@openai/mcp-server"],
+  "url": null,
+  "tools": ["chat_completion", "embeddings", "image_generation", "transcribe_audio", "list_models"],
+  "license": "MIT",
+  "category": "ai-llm",
+  "maintainer": "openai",
+  "upstream": "https://github.com/openai/mcp-server"
+}

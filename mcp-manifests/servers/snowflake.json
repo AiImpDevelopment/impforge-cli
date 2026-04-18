@@ -1,0 +1,14 @@
+{
+  "id": "snowflake",
+  "name": "Snowflake MCP",
+  "description": "Enterprise data-warehouse SQL via Snowflake. Queries, roles, warehouses, Snowpark. Requires SNOWFLAKE_ACCOUNT + credentials.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@snowflake/mcp-server"],
+  "url": null,
+  "tools": ["run_query", "list_databases", "list_tables", "describe_table", "copy_into_table", "list_warehouses"],
+  "license": "Apache-2.0",
+  "category": "database",
+  "maintainer": "snowflake",
+  "upstream": "https://github.com/snowflake-labs/mcp-server"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "openrouter",
+  "name": "OpenRouter MCP",
+  "description": "Unified access to 100+ cloud models (Claude, GPT, Gemini, Llama, Mistral, Qwen) through a single API. Ideal for price-routing. Requires OPENROUTER_API_KEY.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@openrouter/mcp-server"],
+  "url": null,
+  "tools": ["chat_completion", "list_models", "compare_models", "model_pricing"],
+  "license": "MIT",
+  "category": "ai-llm",
+  "maintainer": "openrouter",
+  "upstream": "https://github.com/openrouter/mcp-server"
+}

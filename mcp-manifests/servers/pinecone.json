@@ -1,0 +1,14 @@
+{
+  "id": "pinecone",
+  "name": "Pinecone Vector DB MCP",
+  "description": "Managed vector DB: upsert, query, namespaces, serverless or pod-based. Requires PINECONE_API_KEY.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@pinecone-io/mcp-server"],
+  "url": null,
+  "tools": ["upsert_vectors", "query_vectors", "list_indexes", "create_index", "delete_vectors", "describe_stats"],
+  "license": "Apache-2.0",
+  "category": "vector-database",
+  "maintainer": "pinecone-io",
+  "upstream": "https://github.com/pinecone-io/mcp-server"
+}

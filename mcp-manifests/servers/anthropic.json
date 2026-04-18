@@ -1,0 +1,14 @@
+{
+  "id": "anthropic",
+  "name": "Anthropic API MCP",
+  "description": "Direct access to Anthropic Claude models (haiku/sonnet/opus) for ad-hoc completions.  Complements local Qwen3-imp: use cloud when a model is asked for reasoning above its local capacity. Requires ANTHROPIC_API_KEY.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@anthropic-ai/mcp-server"],
+  "url": null,
+  "tools": ["complete", "chat", "count_tokens", "list_models"],
+  "license": "MIT",
+  "category": "ai-llm",
+  "maintainer": "anthropic",
+  "upstream": "https://github.com/anthropics/mcp-server"
+}

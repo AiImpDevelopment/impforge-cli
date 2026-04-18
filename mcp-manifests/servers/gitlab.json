@@ -1,0 +1,14 @@
+{
+  "id": "gitlab",
+  "name": "GitLab MCP",
+  "description": "Self-hosted + cloud GitLab: projects, issues, MRs, CI pipelines, snippets. Requires GITLAB_TOKEN.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@modelcontextprotocol/server-gitlab"],
+  "url": null,
+  "tools": ["list_projects", "create_issue", "create_mr", "list_pipelines", "get_file_contents", "search_code"],
+  "license": "MIT",
+  "category": "vcs",
+  "maintainer": "modelcontextprotocol",
+  "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/gitlab"
+}

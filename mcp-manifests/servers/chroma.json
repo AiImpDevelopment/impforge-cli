@@ -1,0 +1,14 @@
+{
+  "id": "chroma",
+  "name": "Chroma Vector DB MCP",
+  "description": "Local + cloud vector DB for RAG.  Similarity search, filtering, multi-tenant collections. Works great with nomic-embed-text from Ollama.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@chroma-core/mcp-chroma"],
+  "url": null,
+  "tools": ["add_documents", "query_similarity", "list_collections", "create_collection", "delete_collection", "count_documents"],
+  "license": "Apache-2.0",
+  "category": "vector-database",
+  "maintainer": "chroma-core",
+  "upstream": "https://github.com/chroma-core/mcp-chroma"
+}

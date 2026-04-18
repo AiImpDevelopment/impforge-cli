@@ -1,0 +1,14 @@
+{
+  "id": "bigquery",
+  "name": "BigQuery MCP",
+  "description": "Google BigQuery — run SQL, list datasets/tables, schema introspection, streaming inserts. Requires GCP service-account key.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@google/bigquery-mcp"],
+  "url": null,
+  "tools": ["run_query", "list_datasets", "list_tables", "get_table_schema", "insert_rows", "export_to_gcs"],
+  "license": "Apache-2.0",
+  "category": "database",
+  "maintainer": "google",
+  "upstream": "https://github.com/google-workspace/mcp-servers"
+}

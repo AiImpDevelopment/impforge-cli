@@ -1,0 +1,14 @@
+{
+  "id": "confluence",
+  "name": "Atlassian Confluence MCP",
+  "description": "Read/write pages, search spaces, comment, attach files. Cloud + Data Center. Requires CONFLUENCE_URL + CONFLUENCE_API_TOKEN.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@atlassian/confluence-mcp"],
+  "url": null,
+  "tools": ["get_page", "create_page", "update_page", "search_pages", "list_spaces", "add_attachment"],
+  "license": "MIT",
+  "category": "documentation",
+  "maintainer": "atlassian",
+  "upstream": "https://github.com/atlassian/mcp-server"
+}
