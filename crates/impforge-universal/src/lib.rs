@@ -34,6 +34,7 @@ pub mod consumers;
 pub mod errors;
 pub mod providers;
 pub mod registry;
+pub mod security_gateway;
 pub mod tool;
 
 use impforge_emergence::{
