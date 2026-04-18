@@ -26,6 +26,7 @@ pub mod dims;
 pub mod kind_routing;
 pub mod module;
 pub mod report;
+pub mod safety_prompt;
 pub mod scanner;
 
 pub use behavior::{
@@ -36,4 +37,5 @@ pub use behavior::{
 pub use kind_routing::scan_rust_file as dim8_kind_routing;
 pub use module::Module_;
 pub use report::{CrownJewelFinding, CrownJewelReport, Dimension, Severity};
+pub use safety_prompt::{prompt_mentions_refusal, SafetyCategory, SAFETY_PREAMBLE};
 pub use scanner::{scan, scan_workspace};
