@@ -16,6 +16,7 @@ use serde::{Deserialize, Serialize};
 use std::sync::atomic::{AtomicU8, Ordering};
 
 pub mod backend;
+pub mod ollama;
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]

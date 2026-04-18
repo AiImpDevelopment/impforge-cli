@@ -89,6 +89,11 @@ enum Command {
     /// Qwen3-imp end-to-end QA audit of all bundled content.
     Audit(commands::audit::AuditArgs),
 
+    /// Crown-Jewel Guardian — 5-dimension code quality gate
+    /// (no stubs · no #[allow] · no lonely unwrap · test-first · Crown-Jewel wiring).
+    #[command(subcommand, name = "crown-jewel")]
+    CrownJewel(commands::crown_jewel::CrownJewelCmd),
+
     /// Launch the futuristic TUI dashboard.
     #[cfg(feature = "tui")]
     Tui,
@@ -126,6 +131,7 @@ fn main() -> anyhow::Result<()> {
         Command::Upgrade => commands::upgrade::run()?,
         Command::Brain(cmd) => commands::brain::run(cmd, &orchestrator)?,
         Command::Audit(args) => commands::audit::run(args, &orchestrator)?,
+        Command::CrownJewel(cmd) => commands::crown_jewel::run(cmd, &orchestrator)?,
         #[cfg(feature = "tui")]
         Command::Tui => commands::tui::run(&orchestrator)?,
     }

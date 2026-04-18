@@ -37,6 +37,7 @@ impforge-mcp-server = { path = "../impforge-mcp-server" }
 impforge-contribute = { path = "../impforge-contribute" }
 impforge-export = { path = "../impforge-export" }
 impforge-autonomy = { path = "../impforge-autonomy" }
+impforge-crown-jewel = { path = "../impforge-crown-jewel" }
 
 clap = { workspace = true }
 indicatif = { workspace = true }

@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
 [package]
-name = "impforge-models"
+name = "impforge-crown-jewel"
 version.workspace = true
 edition.workspace = true
 rust-version.workspace = true
@@ -8,24 +8,15 @@ license.workspace = true
 authors.workspace = true
 homepage.workspace = true
 repository.workspace = true
-description = "Unified local-model client for impforge-cli — Ollama HTTP, HuggingFace Hub, optional llama.cpp FFI + Candle."
+description = "Crown-Jewel Guardian — 5-dimension code-quality enforcement: (1) no stubs, (2) no #[allow(*)], (3) no lonely .unwrap(), (4) every pub fn has a test, (5) Crown-Jewel wiring check.  The built-in quality gate that refuses sloppy AI-generated code."
 readme = "../../README.md"
-
-[features]
-default = []
-candle = []
-llamacpp = []
 
 [dependencies]
 impforge-core = { path = "../impforge-core" }
 impforge-emergence = { path = "../impforge-emergence" }
-ollama-rs = { workspace = true }
-hf-hub = { workspace = true }
-reqwest = { workspace = true, features = ["blocking", "json"] }
-tokio = { workspace = true }
 serde = { workspace = true }
 serde_json = { workspace = true }
-thiserror = { workspace = true }
+walkdir = { workspace = true }
 anyhow = { workspace = true }
-tracing = { workspace = true }
-chrono = { workspace = true }
+thiserror = { workspace = true }
+tempfile = { workspace = true }

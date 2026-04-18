@@ -5,6 +5,7 @@ pub mod audit;
 pub mod autopilot;
 pub mod brain;
 pub mod contribute;
+pub mod crown_jewel;
 pub mod doctor;
 pub mod export;
 pub mod generate;
