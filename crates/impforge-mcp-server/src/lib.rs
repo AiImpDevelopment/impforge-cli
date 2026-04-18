@@ -14,6 +14,7 @@
 
 pub mod auto_suspend;
 pub mod catalog_validator;
+pub mod functional_probe;
 pub mod lazy_schema;
 pub mod registration;
 pub mod server;

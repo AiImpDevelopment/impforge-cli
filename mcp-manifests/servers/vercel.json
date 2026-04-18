@@ -1,0 +1,14 @@
+{
+  "id": "vercel",
+  "name": "Vercel MCP",
+  "description": "Deploy projects, list deployments, manage domains, environment variables.  Requires VERCEL_TOKEN.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@vercel/mcp-server"],
+  "url": null,
+  "tools": ["list_deployments", "create_deployment", "list_projects", "list_domains", "set_env_var"],
+  "license": "Apache-2.0",
+  "category": "cloud-infra",
+  "maintainer": "vercel",
+  "upstream": "https://github.com/vercel/mcp-server"
+}

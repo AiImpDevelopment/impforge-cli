@@ -1,0 +1,14 @@
+{
+  "id": "stability-ai",
+  "name": "Stability AI MCP",
+  "description": "SDXL + SD3 + Flux image generation, upscaling, image-to-image, inpainting.  Requires STABILITY_API_KEY.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@stability-ai/mcp-server"],
+  "url": null,
+  "tools": ["generate_image", "upscale_image", "edit_image", "inpaint", "list_engines"],
+  "license": "MIT",
+  "category": "ai-image",
+  "maintainer": "stability-ai",
+  "upstream": "https://github.com/Stability-AI/mcp-server"
+}

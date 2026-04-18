@@ -1,0 +1,14 @@
+{
+  "id": "resend",
+  "name": "Resend MCP",
+  "description": "Modern transactional email API (React-email compatible).  Easy alternative to SendGrid + Mailgun.  Requires RESEND_API_KEY.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@resend/mcp-send-email"],
+  "url": null,
+  "tools": ["send_email", "list_emails", "get_email", "list_domains", "verify_domain"],
+  "license": "MIT",
+  "category": "email",
+  "maintainer": "resend",
+  "upstream": "https://github.com/resend/mcp-send-email"
+}

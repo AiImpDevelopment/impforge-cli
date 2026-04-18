@@ -1,0 +1,14 @@
+{
+  "id": "twilio",
+  "name": "Twilio MCP",
+  "description": "SMS, voice, WhatsApp messaging via Twilio.  Automated reminders for non-tech users.  Requires TWILIO_ACCOUNT_SID + TWILIO_AUTH_TOKEN.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@twilio-labs/mcp-server"],
+  "url": null,
+  "tools": ["send_sms", "make_call", "send_whatsapp", "list_messages", "list_phone_numbers"],
+  "license": "MIT",
+  "category": "communication",
+  "maintainer": "twilio-labs",
+  "upstream": "https://github.com/twilio-labs/mcp-server"
+}

@@ -10,5 +10,6 @@
   "license": "MIT",
   "category": "notes",
   "maintainer": "smithery-ai",
-  "upstream": "https://github.com/smithery-ai/mcp-obsidian"
+  "upstream": "https://github.com/smithery-ai/mcp-obsidian",
+  "verificationStatus": "verified"
 }

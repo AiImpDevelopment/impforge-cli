@@ -10,5 +10,6 @@
   "license": "MIT",
   "category": "utility",
   "maintainer": "modelcontextprotocol",
-  "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/time"
+  "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/time",
+  "verificationStatus": "verified"
 }

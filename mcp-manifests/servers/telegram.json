@@ -10,5 +10,6 @@
   "license": "MIT",
   "category": "communication",
   "maintainer": "chaindead",
-  "upstream": "https://github.com/chaindead/telegram-mcp"
+  "upstream": "https://github.com/chaindead/telegram-mcp",
+  "verificationStatus": "verified"
 }

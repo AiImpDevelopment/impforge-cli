@@ -10,5 +10,6 @@
   "license": "MIT",
   "category": "memory",
   "maintainer": "modelcontextprotocol",
-  "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory"
+  "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
+  "verificationStatus": "verified"
 }

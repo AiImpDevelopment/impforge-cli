@@ -1,0 +1,15 @@
+{
+  "id": "spotify",
+  "name": "Spotify MCP",
+  "description": "Search tracks, control playback, manage playlists, get recommendations.  Requires SPOTIFY_CLIENT_ID + OAuth.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@varunneal/spotify-mcp"],
+  "url": null,
+  "tools": ["search_tracks", "play_track", "list_playlists", "create_playlist", "get_recommendations", "get_current_playback"],
+  "license": "MIT",
+  "category": "media",
+  "maintainer": "varunneal",
+  "upstream": "https://github.com/varunneal/spotify-mcp",
+  "verificationStatus": "verified"
+}

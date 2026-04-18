@@ -1,0 +1,14 @@
+{
+  "id": "sendgrid",
+  "name": "SendGrid MCP",
+  "description": "Transactional email API — verified deliverability, templates, personalisation.  Requires SENDGRID_API_KEY.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@sendgrid/mcp-server"],
+  "url": null,
+  "tools": ["send_email", "list_templates", "create_template", "get_stats", "manage_suppressions"],
+  "license": "MIT",
+  "category": "email",
+  "maintainer": "sendgrid",
+  "upstream": "https://github.com/sendgrid/mcp-server"
+}

@@ -10,5 +10,6 @@
   "license": "MIT",
   "category": "filesystem",
   "maintainer": "modelcontextprotocol",
-  "upstream": "https://github.com/modelcontextprotocol/servers"
+  "upstream": "https://github.com/modelcontextprotocol/servers",
+  "verificationStatus": "verified"
 }

@@ -10,5 +10,6 @@
   "license": "MIT",
   "category": "reference",
   "maintainer": "modelcontextprotocol",
-  "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/everything"
+  "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/everything",
+  "verificationStatus": "verified"
 }

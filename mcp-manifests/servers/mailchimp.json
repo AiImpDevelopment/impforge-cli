@@ -1,0 +1,14 @@
+{
+  "id": "mailchimp",
+  "name": "Mailchimp MCP",
+  "description": "Email marketing automation.  Campaigns, audiences, automations, templates, analytics.  Requires MAILCHIMP_API_KEY.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@mailchimp/mcp-server"],
+  "url": null,
+  "tools": ["send_campaign", "list_audiences", "create_campaign", "add_subscriber", "list_templates", "get_reports"],
+  "license": "MIT",
+  "category": "marketing",
+  "maintainer": "mailchimp",
+  "upstream": "https://github.com/mailchimp/mcp-server"
+}

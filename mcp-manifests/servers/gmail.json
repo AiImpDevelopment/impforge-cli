@@ -10,5 +10,6 @@
   "license": "MIT",
   "category": "communication",
   "maintainer": "gongrzhe",
-  "upstream": "https://github.com/gongrzhe/server-gmail-autoauth-mcp"
+  "upstream": "https://github.com/gongrzhe/server-gmail-autoauth-mcp",
+  "verificationStatus": "verified"
 }

@@ -1,0 +1,14 @@
+{
+  "id": "asana",
+  "name": "Asana MCP",
+  "description": "Task + project management for teams.  Tasks, projects, portfolios, goals, workflows.  Requires ASANA_PAT.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@asana/mcp-server"],
+  "url": null,
+  "tools": ["list_tasks", "create_task", "update_task", "list_projects", "add_attachment", "list_users"],
+  "license": "MIT",
+  "category": "project-management",
+  "maintainer": "asana",
+  "upstream": "https://github.com/asana/mcp-server"
+}

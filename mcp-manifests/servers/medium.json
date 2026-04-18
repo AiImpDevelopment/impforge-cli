@@ -1,0 +1,14 @@
+{
+  "id": "medium",
+  "name": "Medium MCP",
+  "description": "Publish articles to Medium, list + read your posts, tags, publications.  Requires MEDIUM_INTEGRATION_TOKEN.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@medium/mcp-server"],
+  "url": null,
+  "tools": ["publish_post", "list_posts", "get_post", "list_publications", "update_post"],
+  "license": "MIT",
+  "category": "content",
+  "maintainer": "medium",
+  "upstream": "https://github.com/medium-editor/mcp-server"
+}

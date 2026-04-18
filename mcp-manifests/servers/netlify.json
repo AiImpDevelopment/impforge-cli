@@ -1,0 +1,14 @@
+{
+  "id": "netlify",
+  "name": "Netlify MCP",
+  "description": "Site deployments, forms, functions, DNS, split testing.  Requires NETLIFY_TOKEN.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@netlify/mcp-server"],
+  "url": null,
+  "tools": ["list_sites", "create_deploy", "list_forms", "list_functions", "list_domains"],
+  "license": "MIT",
+  "category": "cloud-infra",
+  "maintainer": "netlify",
+  "upstream": "https://github.com/netlify/mcp-server"
+}

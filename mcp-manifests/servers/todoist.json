@@ -10,5 +10,6 @@
   "license": "MIT",
   "category": "productivity",
   "maintainer": "abhiz123",
-  "upstream": "https://github.com/abhiz123/todoist-mcp-server"
+  "upstream": "https://github.com/abhiz123/todoist-mcp-server",
+  "verificationStatus": "verified"
 }

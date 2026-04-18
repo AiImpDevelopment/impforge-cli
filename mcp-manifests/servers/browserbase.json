@@ -1,0 +1,14 @@
+{
+  "id": "browserbase",
+  "name": "Browserbase MCP",
+  "description": "Cloud-hosted headless browsers for AI web automation.  Sessions, screenshots, navigation, forms.  Requires BROWSERBASE_API_KEY.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@browserbasehq/mcp-browserbase"],
+  "url": null,
+  "tools": ["create_session", "navigate", "screenshot", "fill_form", "click_element"],
+  "license": "Apache-2.0",
+  "category": "browser",
+  "maintainer": "browserbasehq",
+  "upstream": "https://github.com/browserbase/mcp-server-browserbase"
+}

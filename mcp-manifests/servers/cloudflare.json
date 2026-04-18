@@ -1,0 +1,14 @@
+{
+  "id": "cloudflare",
+  "name": "Cloudflare MCP",
+  "description": "DNS records, Workers, Pages, R2 storage, KV, D1 databases, Zero Trust.  Requires CF_API_TOKEN.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@cloudflare/mcp-server-cloudflare"],
+  "url": null,
+  "tools": ["list_zones", "list_dns_records", "create_dns_record", "list_workers", "deploy_worker", "list_r2_buckets"],
+  "license": "Apache-2.0",
+  "category": "cloud-infra",
+  "maintainer": "cloudflare",
+  "upstream": "https://github.com/cloudflare/mcp-server-cloudflare"
+}

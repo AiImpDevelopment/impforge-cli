@@ -1,0 +1,14 @@
+{
+  "id": "bitbucket",
+  "name": "Bitbucket MCP",
+  "description": "Atlassian Bitbucket — repositories, pull requests, pipelines, issues.  Requires BITBUCKET_APP_PASSWORD + BITBUCKET_USERNAME.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@modelcontextprotocol/server-bitbucket"],
+  "url": null,
+  "tools": ["list_repos", "list_pull_requests", "create_pull_request", "list_pipelines", "get_file_contents"],
+  "license": "MIT",
+  "category": "vcs",
+  "maintainer": "modelcontextprotocol",
+  "upstream": "https://github.com/modelcontextprotocol/servers"
+}

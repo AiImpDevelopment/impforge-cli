@@ -1,0 +1,14 @@
+{
+  "id": "supabase",
+  "name": "Supabase MCP",
+  "description": "Postgres + Auth + Storage + Edge Functions via Supabase.  Open-source Firebase alternative.  Requires SUPABASE_URL + SUPABASE_ANON_KEY.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@supabase-community/supabase-mcp"],
+  "url": null,
+  "tools": ["list_tables", "run_query", "insert_row", "list_buckets", "upload_file", "invoke_edge_function"],
+  "license": "Apache-2.0",
+  "category": "baas",
+  "maintainer": "supabase-community",
+  "upstream": "https://github.com/supabase-community/supabase-mcp"
+}

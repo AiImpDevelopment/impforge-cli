@@ -1,0 +1,14 @@
+{
+  "id": "elevenlabs",
+  "name": "ElevenLabs MCP",
+  "description": "Text-to-speech with cloned voices, multilingual, voice design.  Audiobook + podcast production for non-techies.  Requires ELEVENLABS_API_KEY.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@elevenlabs/mcp-server"],
+  "url": null,
+  "tools": ["text_to_speech", "list_voices", "clone_voice", "list_models", "get_audio_file"],
+  "license": "MIT",
+  "category": "ai-audio",
+  "maintainer": "elevenlabs",
+  "upstream": "https://github.com/elevenlabs/mcp-server"
+}

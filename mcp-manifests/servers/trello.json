@@ -1,0 +1,15 @@
+{
+  "id": "trello",
+  "name": "Trello MCP",
+  "description": "Kanban boards for non-technical project managers.  Lists, cards, checklists, labels, attachments.  Requires TRELLO_KEY + TRELLO_TOKEN.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@delorenj/mcp-server-trello"],
+  "url": null,
+  "tools": ["list_boards", "list_cards", "create_card", "move_card", "add_checklist", "add_comment"],
+  "license": "MIT",
+  "category": "project-management",
+  "maintainer": "delorenj",
+  "upstream": "https://github.com/delorenj/mcp-server-trello",
+  "verificationStatus": "verified"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "perplexity",
+  "name": "Perplexity MCP",
+  "description": "Perplexity AI chat completion + online mode (fresh web results).  Perfect for research queries.  Requires PERPLEXITY_API_KEY.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@perplexity/perplexity-mcp"],
+  "url": null,
+  "tools": ["perplexity_search", "perplexity_chat"],
+  "license": "MIT",
+  "category": "ai-llm",
+  "maintainer": "perplexity-ai",
+  "upstream": "https://github.com/perplexity-ai/mcp-server"
+}

@@ -35,6 +35,33 @@ pub struct McpServerManifest {
     pub category: String,
     pub maintainer: String,
     pub upstream: String,
+    /// Verification status.  Defaults to `Community` when the field is
+    /// omitted (backward-compatible).  `Verified` means an integration
+    /// test in this repository has spawned the upstream package and
+    /// received a valid MCP handshake.  `Planned` means the manifest is
+    /// declarative scaffolding for an upstream package that does not
+    /// exist yet on npm / crates.io — the community can PR it to active.
+    #[serde(default)]
+    pub verification_status: VerificationStatus,
+}
+
+#[derive(Debug, Clone, Copy, Default, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum VerificationStatus {
+    Verified,
+    #[default]
+    Community,
+    Planned,
+}
+
+impl VerificationStatus {
+    pub fn as_str(self) -> &'static str {
+        match self {
+            VerificationStatus::Verified => "verified",
+            VerificationStatus::Community => "community",
+            VerificationStatus::Planned => "planned",
+        }
+    }
 }
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]

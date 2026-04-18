@@ -10,5 +10,6 @@
   "license": "MIT",
   "category": "search",
   "maintainer": "modelcontextprotocol",
-  "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/brave-search"
+  "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/brave-search",
+  "verificationStatus": "verified"
 }

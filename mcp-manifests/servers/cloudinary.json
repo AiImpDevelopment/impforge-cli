@@ -1,0 +1,14 @@
+{
+  "id": "cloudinary",
+  "name": "Cloudinary MCP",
+  "description": "Image + video CDN with AI transformations (background-remove, smart-crop, upscale).  Requires CLOUDINARY_URL.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@cloudinary/mcp-server"],
+  "url": null,
+  "tools": ["upload_asset", "transform_image", "list_assets", "generate_url", "delete_asset"],
+  "license": "MIT",
+  "category": "media",
+  "maintainer": "cloudinary",
+  "upstream": "https://github.com/cloudinary/mcp-server"
+}

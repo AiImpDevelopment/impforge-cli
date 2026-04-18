@@ -1,0 +1,15 @@
+{
+  "id": "reddit",
+  "name": "Reddit MCP",
+  "description": "Browse subreddits, read posts + comments, search across Reddit.  Read-only unless REDDIT_CLIENT_ID + credentials supplied.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@Hawstein/mcp-server-reddit"],
+  "url": null,
+  "tools": ["list_subreddit", "get_post", "get_comments", "search_reddit", "get_user_posts"],
+  "license": "MIT",
+  "category": "content",
+  "maintainer": "Hawstein",
+  "upstream": "https://github.com/Hawstein/mcp-server-reddit",
+  "verificationStatus": "verified"
+}

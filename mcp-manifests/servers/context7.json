@@ -10,5 +10,6 @@
   "license": "MIT",
   "category": "documentation",
   "maintainer": "upstash",
-  "upstream": "https://github.com/upstash/context7"
+  "upstream": "https://github.com/upstash/context7",
+  "verificationStatus": "verified"
 }

@@ -1,0 +1,14 @@
+{
+  "id": "unsplash",
+  "name": "Unsplash MCP",
+  "description": "Search + download free stock photography for blog posts, social, presentations.  Requires UNSPLASH_ACCESS_KEY.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@unsplash/mcp-server"],
+  "url": null,
+  "tools": ["search_photos", "get_photo", "download_photo", "random_photo", "list_collections"],
+  "license": "MIT",
+  "category": "media",
+  "maintainer": "unsplash",
+  "upstream": "https://github.com/unsplash/mcp-server"
+}

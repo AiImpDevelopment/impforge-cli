@@ -1,0 +1,14 @@
+{
+  "id": "railway",
+  "name": "Railway MCP",
+  "description": "Deploy any app (Rails, Django, Node, Rust, Go) with one command.  Services, volumes, envs, logs.  Requires RAILWAY_TOKEN.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@railway/mcp-server"],
+  "url": null,
+  "tools": ["list_projects", "deploy_service", "list_deployments", "set_env_var", "get_logs"],
+  "license": "MIT",
+  "category": "cloud-infra",
+  "maintainer": "railway",
+  "upstream": "https://github.com/railwayapp/mcp-server"
+}

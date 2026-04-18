@@ -10,5 +10,6 @@
   "license": "MIT",
   "category": "notes",
   "maintainer": "makenotion",
-  "upstream": "https://github.com/makenotion/notion-mcp-server"
+  "upstream": "https://github.com/makenotion/notion-mcp-server",
+  "verificationStatus": "verified"
 }

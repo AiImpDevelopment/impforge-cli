@@ -1,0 +1,14 @@
+{
+  "id": "home-assistant",
+  "name": "Home Assistant MCP",
+  "description": "Self-hosted smart-home hub — lights, thermostats, cameras, locks, 2000+ integrations.  Non-tech-friendly once configured.  Requires HOMEASSISTANT_URL + HOMEASSISTANT_TOKEN.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@home-assistant/mcp-server"],
+  "url": null,
+  "tools": ["list_entities", "call_service", "get_state", "list_automations", "trigger_automation"],
+  "license": "Apache-2.0",
+  "category": "iot",
+  "maintainer": "home-assistant",
+  "upstream": "https://github.com/home-assistant/mcp-server"
+}

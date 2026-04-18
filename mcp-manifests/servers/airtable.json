@@ -10,5 +10,6 @@
   "license": "MIT",
   "category": "database",
   "maintainer": "domdomegg",
-  "upstream": "https://github.com/domdomegg/airtable-mcp-server"
+  "upstream": "https://github.com/domdomegg/airtable-mcp-server",
+  "verificationStatus": "verified"
 }

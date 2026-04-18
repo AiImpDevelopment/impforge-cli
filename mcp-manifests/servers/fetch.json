@@ -10,5 +10,6 @@
   "license": "MIT",
   "category": "network",
   "maintainer": "modelcontextprotocol",
-  "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch"
+  "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch",
+  "verificationStatus": "verified"
 }

@@ -1,0 +1,14 @@
+{
+  "id": "exa",
+  "name": "Exa Semantic Search MCP",
+  "description": "Semantic-embedding web search + neural re-ranking + content extraction.  Alternative to Google for AI agents.  Requires EXA_API_KEY.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@exa-labs/exa-mcp-server"],
+  "url": null,
+  "tools": ["exa_search", "exa_find_similar", "exa_get_contents"],
+  "license": "MIT",
+  "category": "search",
+  "maintainer": "exa-labs",
+  "upstream": "https://github.com/exa-labs/exa-mcp-server"
+}

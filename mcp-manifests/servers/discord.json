@@ -10,5 +10,6 @@
   "license": "MIT",
   "category": "communication",
   "maintainer": "barryyip0625",
-  "upstream": "https://github.com/barryyip0625/mcp-discord"
+  "upstream": "https://github.com/barryyip0625/mcp-discord",
+  "verificationStatus": "verified"
 }

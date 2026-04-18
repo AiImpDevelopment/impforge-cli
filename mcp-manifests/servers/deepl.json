@@ -1,0 +1,14 @@
+{
+  "id": "deepl",
+  "name": "DeepL MCP",
+  "description": "High-quality machine translation (30+ languages).  Document translation, glossaries, formality control.  Requires DEEPL_API_KEY.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@deepl/deepl-mcp-server"],
+  "url": null,
+  "tools": ["translate_text", "translate_document", "detect_language", "get_usage", "list_glossaries"],
+  "license": "MIT",
+  "category": "translation",
+  "maintainer": "deepl",
+  "upstream": "https://github.com/DeepLcom/mcp-server"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "tavily",
+  "name": "Tavily Search MCP",
+  "description": "AI-optimised web search + extract API designed for LLM agents.  Lower noise than Brave / Google for agentic RAG.  Requires TAVILY_API_KEY.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "tavily-mcp"],
+  "url": null,
+  "tools": ["tavily_search", "tavily_extract", "tavily_qna_search"],
+  "license": "MIT",
+  "category": "search",
+  "maintainer": "tavily-ai",
+  "upstream": "https://github.com/tavily-ai/tavily-mcp",
+  "verificationStatus": "verified"
+}

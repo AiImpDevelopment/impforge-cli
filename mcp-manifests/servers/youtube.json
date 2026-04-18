@@ -1,0 +1,15 @@
+{
+  "id": "youtube",
+  "name": "YouTube MCP",
+  "description": "Read video metadata, search videos, list playlists, get captions, channel analytics.  Requires YOUTUBE_API_KEY.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@anaisbetts/mcp-youtube"],
+  "url": null,
+  "tools": ["search_videos", "get_video_info", "get_captions", "list_playlist", "channel_info"],
+  "license": "MIT",
+  "category": "content",
+  "maintainer": "anaisbetts",
+  "upstream": "https://github.com/anaisbetts/mcp-youtube",
+  "verificationStatus": "verified"
+}

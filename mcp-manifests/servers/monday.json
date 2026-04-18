@@ -1,0 +1,14 @@
+{
+  "id": "monday",
+  "name": "Monday.com MCP",
+  "description": "Work OS for cross-functional teams.  Items, boards, updates, statuses, automations.  Requires MONDAY_API_KEY.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@monday-dev/mcp-server"],
+  "url": null,
+  "tools": ["list_boards", "list_items", "create_item", "update_column_value", "add_update", "get_users"],
+  "license": "MIT",
+  "category": "project-management",
+  "maintainer": "monday-dev",
+  "upstream": "https://github.com/monday-dev/mcp-server"
+}

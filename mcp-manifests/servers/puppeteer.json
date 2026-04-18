@@ -10,5 +10,6 @@
   "license": "MIT",
   "category": "browser",
   "maintainer": "modelcontextprotocol",
-  "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer"
+  "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer",
+  "verificationStatus": "verified"
 }

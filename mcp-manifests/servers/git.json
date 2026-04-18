@@ -10,5 +10,6 @@
   "license": "MIT",
   "category": "vcs",
   "maintainer": "modelcontextprotocol",
-  "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/git"
+  "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/git",
+  "verificationStatus": "verified"
 }

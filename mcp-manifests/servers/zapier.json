@@ -1,0 +1,14 @@
+{
+  "id": "zapier",
+  "name": "Zapier MCP",
+  "description": "5000+ app integrations — Zapier's entire catalogue reachable from AI.  For non-techies: 'When I get a new Shopify order, add a row to Google Sheets and Slack me' just works. Requires ZAPIER_API_KEY.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@zapier/mcp-server"],
+  "url": null,
+  "tools": ["list_apps", "list_zaps", "trigger_zap", "create_zap", "get_zap_history"],
+  "license": "MIT",
+  "category": "automation",
+  "maintainer": "zapier",
+  "upstream": "https://github.com/zapier/mcp-server"
+}

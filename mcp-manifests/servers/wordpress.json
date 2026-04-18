@@ -1,0 +1,14 @@
+{
+  "id": "wordpress",
+  "name": "WordPress MCP",
+  "description": "REST-API bridge to any WordPress site — posts, pages, media, users, plugins.  Requires WORDPRESS_URL + credentials.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@wordpress/mcp-server"],
+  "url": null,
+  "tools": ["create_post", "update_post", "list_posts", "upload_media", "list_pages", "list_users"],
+  "license": "MIT",
+  "category": "cms",
+  "maintainer": "wordpress",
+  "upstream": "https://github.com/wordpress/mcp-server"
+}
