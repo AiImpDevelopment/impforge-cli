@@ -1,0 +1,14 @@
+{
+  "id": "slack",
+  "name": "Slack MCP",
+  "description": "Official MCP server for Slack workspaces: list channels, post messages, read history.  Requires bot token.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@modelcontextprotocol/server-slack"],
+  "url": null,
+  "tools": ["slack_list_channels", "slack_post_message", "slack_reply_to_thread", "slack_add_reaction", "slack_get_channel_history"],
+  "license": "MIT",
+  "category": "communication",
+  "maintainer": "modelcontextprotocol",
+  "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/slack"
+}

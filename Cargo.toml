@@ -11,6 +11,7 @@ members = [
     "crates/impforge-export",
     "crates/impforge-autonomy",
     "crates/impforge-emergence",
+    "crates/impforge-aiimp-updater",
 ]
 
 [workspace.package]

@@ -1,0 +1,80 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+permissions:
+  contents: read
+
+env:
+  CARGO_TERM_COLOR: always
+  RUSTFLAGS: "-D warnings"
+
+jobs:
+  check:
+    name: cargo check · clippy · test
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, macos-latest, windows-latest ]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - uses: Swatinem/rust-cache@v2
+
+      - name: fmt
+        run: cargo fmt --all -- --check
+
+      - name: check
+        run: cargo check --workspace --all-targets
+
+      - name: clippy
+        run: cargo clippy --workspace --all-targets -- -D warnings
+
+      - name: test
+        run: cargo test --workspace --all-targets
+
+  verify-content:
+    name: verify bundled content
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: validate all template.json files
+        run: |
+          python3 <<'PY'
+          import json, pathlib, sys
+          errors = 0
+          for p in pathlib.Path('templates').rglob('template.json'):
+              try:
+                  json.loads(p.read_text())
+              except Exception as e:
+                  print(f'::error file={p}::{e}')
+                  errors += 1
+          sys.exit(0 if errors == 0 else 1)
+          PY
+
+      - name: validate all MCP manifests
+        run: |
+          python3 <<'PY'
+          import json, pathlib, sys
+          errors = 0
+          for p in pathlib.Path('mcp-manifests/servers').glob('*.json'):
+              try:
+                  j = json.loads(p.read_text())
+                  for k in ('id','name','description','transport','license'):
+                      if k not in j:
+                          print(f'::error file={p}::missing field "{k}"')
+                          errors += 1
+              except Exception as e:
+                  print(f'::error file={p}::{e}')
+                  errors += 1
+          sys.exit(0 if errors == 0 else 1)
+          PY

@@ -1,0 +1,14 @@
+{
+  "id": "firecrawl",
+  "name": "Firecrawl MCP",
+  "description": "Web scraping + crawling: scrape single URLs, crawl entire sites, extract structured data.  Requires Firecrawl API key.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "firecrawl-mcp"],
+  "url": null,
+  "tools": ["firecrawl_scrape", "firecrawl_crawl", "firecrawl_map", "firecrawl_extract", "firecrawl_search"],
+  "license": "MIT",
+  "category": "scraping",
+  "maintainer": "mendableai",
+  "upstream": "https://github.com/mendableai/firecrawl-mcp-server"
+}

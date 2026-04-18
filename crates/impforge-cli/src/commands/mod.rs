@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: MIT
 //! Command handlers — each subcommand has its own module.
 
+pub mod audit;
 pub mod autopilot;
+pub mod brain;
 pub mod contribute;
 pub mod doctor;
 pub mod export;

@@ -1,0 +1,14 @@
+{
+  "id": "memory",
+  "name": "Memory MCP",
+  "description": "Official MCP server — persistent key-value memory for long-term context.  Stores facts the AI should remember across sessions.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@modelcontextprotocol/server-memory"],
+  "url": null,
+  "tools": ["create_entities", "search_nodes", "add_observations", "delete_entities", "read_graph"],
+  "license": "MIT",
+  "category": "memory",
+  "maintainer": "modelcontextprotocol",
+  "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory"
+}

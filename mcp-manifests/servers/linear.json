@@ -1,0 +1,14 @@
+{
+  "id": "linear",
+  "name": "Linear MCP",
+  "description": "Linear issue tracking: projects, issues, cycles, comments.  Uses Linear API key.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@linear/mcp-server"],
+  "url": null,
+  "tools": ["list_projects", "list_issues", "create_issue", "update_issue", "add_comment"],
+  "license": "MIT",
+  "category": "project-management",
+  "maintainer": "linear",
+  "upstream": "https://github.com/linear/linear-mcp-server"
+}

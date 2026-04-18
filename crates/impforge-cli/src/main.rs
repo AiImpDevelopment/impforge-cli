@@ -82,6 +82,13 @@ enum Command {
     /// Open the impforge-aiimp (Pro) upgrade page.
     Upgrade,
 
+    /// Manage THE BRAIN (qwen3-imp:8b — the exact model that powers Pro).
+    #[command(subcommand)]
+    Brain(commands::brain::BrainCmd),
+
+    /// Qwen3-imp end-to-end QA audit of all bundled content.
+    Audit(commands::audit::AuditArgs),
+
     /// Launch the futuristic TUI dashboard.
     #[cfg(feature = "tui")]
     Tui,
@@ -117,6 +124,8 @@ fn main() -> anyhow::Result<()> {
         Command::ExportConfig { output } => commands::export::run(&output, &orchestrator)?,
         Command::Contribute(cmd) => commands::contribute::run(cmd, &orchestrator)?,
         Command::Upgrade => commands::upgrade::run()?,
+        Command::Brain(cmd) => commands::brain::run(cmd, &orchestrator)?,
+        Command::Audit(args) => commands::audit::run(args, &orchestrator)?,
         #[cfg(feature = "tui")]
         Command::Tui => commands::tui::run(&orchestrator)?,
     }

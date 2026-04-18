@@ -1,0 +1,14 @@
+{
+  "id": "docker",
+  "name": "Docker MCP",
+  "description": "Docker CLI wrapper: list containers, images, networks, volumes; start/stop containers; compose up.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "docker-mcp"],
+  "url": null,
+  "tools": ["docker_ps", "docker_images", "docker_logs", "docker_run", "docker_stop", "docker_compose_up"],
+  "license": "MIT",
+  "category": "devops",
+  "maintainer": "ckreiling",
+  "upstream": "https://github.com/ckreiling/mcp-server-docker"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "aws",
+  "name": "AWS MCP",
+  "description": "AWS CLI wrapper: S3 / EC2 / Lambda / IAM read-only access.  Auth via standard AWS credentials chain.",
+  "transport": "stdio",
+  "command": "uvx",
+  "args": ["awslabs.aws-api-mcp-server"],
+  "url": null,
+  "tools": ["aws_s3_list", "aws_ec2_describe", "aws_lambda_list", "aws_iam_list_users", "aws_cloudwatch_logs"],
+  "license": "Apache-2.0",
+  "category": "cloud",
+  "maintainer": "awslabs",
+  "upstream": "https://github.com/awslabs/mcp"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "stripe",
+  "name": "Stripe MCP",
+  "description": "Official Stripe MCP server: customers, subscriptions, invoices, payment intents.  Uses Stripe API key auth.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@stripe/mcp", "--tools=all"],
+  "url": null,
+  "tools": ["create_customer", "list_customers", "create_subscription", "list_subscriptions", "create_invoice", "list_payment_intents"],
+  "license": "MIT",
+  "category": "payments",
+  "maintainer": "stripe",
+  "upstream": "https://github.com/stripe/agent-toolkit"
+}

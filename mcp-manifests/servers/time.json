@@ -1,0 +1,14 @@
+{
+  "id": "time",
+  "name": "Time MCP",
+  "description": "Timezone-aware time / date utilities.  Essential for scheduling, calendar work, and log analysis.",
+  "transport": "stdio",
+  "command": "uvx",
+  "args": ["mcp-server-time"],
+  "url": null,
+  "tools": ["get_current_time", "convert_time"],
+  "license": "MIT",
+  "category": "utility",
+  "maintainer": "modelcontextprotocol",
+  "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/time"
+}

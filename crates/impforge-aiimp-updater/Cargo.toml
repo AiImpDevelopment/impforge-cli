@@ -1,0 +1,33 @@
+# SPDX-License-Identifier: MIT
+[package]
+name = "impforge-aiimp-updater"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+homepage.workspace = true
+repository.workspace = true
+description = "MIT companion crate — version-check + SHA-256 + Ed25519-verified downloader for impforge-aiimp (Pro) release binaries.  No engine internals, no license keys."
+readme = "../../README.md"
+
+[[bin]]
+name = "impforge-aiimp-updater"
+path = "src/main.rs"
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+sha2 = { workspace = true }
+ed25519-dalek = { workspace = true }
+hex = { workspace = true }
+reqwest = { workspace = true }
+tokio = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+clap = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+dirs = { workspace = true }
+indicatif = { workspace = true }
+chrono = { workspace = true }

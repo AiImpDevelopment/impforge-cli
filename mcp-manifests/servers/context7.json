@@ -1,0 +1,14 @@
+{
+  "id": "context7",
+  "name": "Context7 MCP",
+  "description": "Up-to-date library documentation for Claude / Cursor / any AI tool.  Fetches current docs for React, Django, Spring, etc.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@upstash/context7-mcp"],
+  "url": null,
+  "tools": ["resolve-library-id", "query-docs"],
+  "license": "MIT",
+  "category": "documentation",
+  "maintainer": "upstash",
+  "upstream": "https://github.com/upstash/context7"
+}

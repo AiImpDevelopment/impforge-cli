@@ -1,0 +1,14 @@
+{
+  "id": "kubernetes",
+  "name": "Kubernetes MCP",
+  "description": "kubectl wrapper with namespace-scoped access: get / describe / logs / apply / delete.  Read-only by default.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "mcp-server-kubernetes"],
+  "url": null,
+  "tools": ["list_pods", "describe_pod", "get_logs", "apply_manifest", "delete_resource"],
+  "license": "MIT",
+  "category": "devops",
+  "maintainer": "Flux159",
+  "upstream": "https://github.com/Flux159/mcp-server-kubernetes"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "redis",
+  "name": "Redis MCP",
+  "description": "Redis operations: get / set / del / list / hash / stream.  Uses standard Redis URL.",
+  "transport": "stdio",
+  "command": "uvx",
+  "args": ["mcp-server-redis"],
+  "url": null,
+  "tools": ["redis_get", "redis_set", "redis_del", "redis_list", "redis_hgetall"],
+  "license": "MIT",
+  "category": "database",
+  "maintainer": "redis",
+  "upstream": "https://github.com/redis/mcp-redis"
+}

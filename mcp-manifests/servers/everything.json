@@ -1,0 +1,14 @@
+{
+  "id": "everything",
+  "name": "Everything MCP",
+  "description": "Official reference MCP server — exercises every MCP capability (tools, prompts, resources, sampling).  Invaluable for testing clients.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@modelcontextprotocol/server-everything"],
+  "url": null,
+  "tools": ["add", "echo", "long_running_operation", "sample_llm"],
+  "license": "MIT",
+  "category": "reference",
+  "maintainer": "modelcontextprotocol",
+  "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/everything"
+}

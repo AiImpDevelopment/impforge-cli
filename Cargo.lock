@@ -1006,6 +1006,27 @@ dependencies = [
 ]
 
 [[package]]
+name = "impforge-aiimp-updater"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "chrono",
+ "clap",
+ "dirs",
+ "ed25519-dalek",
+ "hex",
+ "indicatif",
+ "reqwest",
+ "serde",
+ "serde_json",
+ "sha2",
+ "thiserror 1.0.69",
+ "tokio",
+ "tracing",
+ "tracing-subscriber",
+]
+
+[[package]]
 name = "impforge-autonomy"
 version = "0.1.0"
 dependencies = [

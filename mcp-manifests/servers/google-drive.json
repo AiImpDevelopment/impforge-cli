@@ -1,0 +1,14 @@
+{
+  "id": "google-drive",
+  "name": "Google Drive MCP",
+  "description": "Access Google Drive files: list, read, search.  OAuth-based auth through the official MCP server.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@modelcontextprotocol/server-gdrive"],
+  "url": null,
+  "tools": ["search", "gdrive_search", "gdrive_read_file"],
+  "license": "MIT",
+  "category": "productivity",
+  "maintainer": "modelcontextprotocol",
+  "upstream": "https://github.com/modelcontextprotocol/servers/tree/main/src/gdrive"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "sentry",
+  "name": "Sentry MCP",
+  "description": "Official Sentry MCP server — query issues, events, releases; create alerts.  Auth via Sentry auth token.",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@sentry/mcp-server"],
+  "url": null,
+  "tools": ["search_issues", "get_issue", "list_events", "list_releases", "create_alert"],
+  "license": "MIT",
+  "category": "observability",
+  "maintainer": "getsentry",
+  "upstream": "https://github.com/getsentry/sentry-mcp"
+}
