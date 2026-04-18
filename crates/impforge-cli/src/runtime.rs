@@ -20,6 +20,7 @@ pub fn bootstrap_orchestrator() -> anyhow::Result<Orchestrator> {
     orc.register(Arc::new(impforge_crown_jewel::Module_))?;
     orc.register(Arc::new(impforge_bench::Module_))?;
     orc.register(Arc::new(impforge_remote::Module_))?;
+    orc.register(Arc::new(impforge_universal::Module_))?;
 
     Ok(orc)
 }

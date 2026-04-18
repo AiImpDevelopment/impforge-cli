@@ -40,6 +40,7 @@ impforge-autonomy = { path = "../impforge-autonomy" }
 impforge-crown-jewel = { path = "../impforge-crown-jewel" }
 impforge-bench = { path = "../impforge-bench" }
 impforge-remote = { path = "../impforge-remote" }
+impforge-universal = { path = "../impforge-universal" }
 
 clap = { workspace = true }
 indicatif = { workspace = true }
