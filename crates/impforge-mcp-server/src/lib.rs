@@ -13,6 +13,7 @@
 //! token usage by up to 90 %.
 
 pub mod auto_suspend;
+pub mod catalog_validator;
 pub mod lazy_schema;
 pub mod registration;
 pub mod server;
@@ -36,6 +37,7 @@ impl Module for Module_ {
             Capability::new("mcp-serve", "start stdio MCP server", CapabilityCost::Medium),
             Capability::new("mcp-register-client", "generate config for AI client", CapabilityCost::Low),
             Capability::new("mcp-list-tools", "list tool names only (lazy)", CapabilityCost::Zero),
+            Capability::new("mcp-catalog-validate", "Crown-Jewel validate 60-server catalog (schema · license · command · url · tools)", CapabilityCost::Zero),
         ]
     }
 

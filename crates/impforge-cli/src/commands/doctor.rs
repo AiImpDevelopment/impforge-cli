@@ -97,33 +97,38 @@ fn probe_mcp_manifests() -> bool {
         theme::print_warning(&format!("mcp-manifests dir missing: {}", root.display()));
         return false;
     }
-    let files: Vec<PathBuf> = std::fs::read_dir(&root)
-        .map(|it| {
-            it.filter_map(|e| e.ok())
-                .filter(|e| e.file_type().map(|t| t.is_file()).unwrap_or(false))
-                .map(|e| e.path())
-                .collect()
-        })
-        .unwrap_or_default();
-    let mut bad = 0;
-    for p in &files {
-        let raw = match std::fs::read_to_string(p) {
-            Ok(r) => r,
-            Err(_) => {
-                bad += 1;
-                continue;
-            }
-        };
-        if serde_json::from_str::<serde_json::Value>(&raw).is_err() {
-            bad += 1;
+    match impforge_mcp_server::catalog_validator::validate_catalog(&root) {
+        Ok(report) if report.is_clean() => {
+            theme::print_success(&format!(
+                "mcp-manifests: Crown-Jewel CLEAN — {}/{} pass (schema + license + cmd + url + tools)",
+                report.clean, report.total_manifests
+            ));
+            true
         }
-    }
-    if bad == 0 {
-        theme::print_success(&format!("mcp-manifests: {} valid", files.len()));
-        true
-    } else {
-        theme::print_warning(&format!("mcp-manifests: {bad}/{} broken", files.len()));
-        false
+        Ok(report) => {
+            theme::print_warning(&format!(
+                "mcp-manifests: Crown-Jewel DIRTY — {}/{} fail",
+                report.dirty, report.total_manifests
+            ));
+            for r in report.per_manifest.iter().filter(|r| !r.is_clean()) {
+                println!(
+                    "  BAD: {} ({:?})",
+                    r.file.display(),
+                    r.manifest_id
+                );
+                for issue in &r.issues {
+                    println!("    - {issue}");
+                }
+            }
+            if !report.duplicate_ids.is_empty() {
+                println!("  duplicate ids: {:?}", report.duplicate_ids);
+            }
+            false
+        }
+        Err(e) => {
+            theme::print_warning(&format!("mcp-manifests: validator failed: {e}"));
+            false
+        }
     }
 }
 
