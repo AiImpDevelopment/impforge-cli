@@ -127,6 +127,20 @@ impl ReactConsumer {
     }
 }
 
+impl crate::consumers::ToolConsumer for ReactConsumer {
+    fn dialect(&self) -> &'static str {
+        "react_text"
+    }
+
+    fn render_catalog(&self, tools: &[UniversalTool]) -> UniversalResult<String> {
+        Ok(self.render_system_prompt(tools))
+    }
+
+    fn parse_call(&self, model_output: &str) -> UniversalResult<Option<ToolCall>> {
+        self.parse_next_action(model_output)
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;

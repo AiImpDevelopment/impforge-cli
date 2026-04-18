@@ -46,8 +46,16 @@ pub use tool::{
     CapabilityNegotiation, ClientProtocol, ToolCall, ToolInvocationResult, UniversalTool,
 };
 
+pub use consumers::anthropic::AnthropicConsumer;
+pub use consumers::gbnf::GbnfConsumer;
+pub use consumers::gemini::GeminiConsumer;
+pub use consumers::mcp_pass::McpPassConsumer;
+pub use consumers::openai::OpenAiConsumer;
 pub use consumers::react::ReactConsumer;
+pub use consumers::ToolConsumer;
 pub use providers::mcp_client::McpClientProvider;
+pub use providers::mcp_live::McpLiveProvider;
+pub use providers::ToolProvider;
 
 pub struct Module_;
 

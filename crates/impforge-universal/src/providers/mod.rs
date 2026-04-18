@@ -8,6 +8,7 @@
 //! facade for the registry.
 
 pub mod mcp_client;
+pub mod mcp_live;
 
 use crate::errors::UniversalResult;
 use crate::tool::UniversalTool;
