@@ -89,10 +89,17 @@ enum Command {
     /// Qwen3-imp end-to-end QA audit of all bundled content.
     Audit(commands::audit::AuditArgs),
 
-    /// Crown-Jewel Guardian — 5-dimension code quality gate
-    /// (no stubs · no #[allow] · no lonely unwrap · test-first · Crown-Jewel wiring).
+    /// Crown-Jewel Guardian — 7-dimension code + behavior quality gate.
     #[command(subcommand, name = "crown-jewel")]
     CrownJewel(commands::crown_jewel::CrownJewelCmd),
+
+    /// Scientific uplift benchmark — bare Ollama vs impforge-cli context.
+    #[command(subcommand)]
+    Bench(commands::bench::BenchCmd),
+
+    /// Mobile bridge (Signal / Telegram / WhatsApp) — status, allowlist, test send.
+    #[command(subcommand)]
+    Remote(commands::remote::RemoteCmd),
 
     /// Launch the futuristic TUI dashboard.
     #[cfg(feature = "tui")]
@@ -132,6 +139,8 @@ fn main() -> anyhow::Result<()> {
         Command::Brain(cmd) => commands::brain::run(cmd, &orchestrator)?,
         Command::Audit(args) => commands::audit::run(args, &orchestrator)?,
         Command::CrownJewel(cmd) => commands::crown_jewel::run(cmd, &orchestrator)?,
+        Command::Bench(cmd) => commands::bench::run(cmd, &orchestrator)?,
+        Command::Remote(cmd) => commands::remote::run(cmd, &orchestrator)?,
         #[cfg(feature = "tui")]
         Command::Tui => commands::tui::run(&orchestrator)?,
     }

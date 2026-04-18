@@ -38,6 +38,8 @@ impforge-contribute = { path = "../impforge-contribute" }
 impforge-export = { path = "../impforge-export" }
 impforge-autonomy = { path = "../impforge-autonomy" }
 impforge-crown-jewel = { path = "../impforge-crown-jewel" }
+impforge-bench = { path = "../impforge-bench" }
+impforge-remote = { path = "../impforge-remote" }
 
 clap = { workspace = true }
 indicatif = { workspace = true }

@@ -12,8 +12,10 @@
 //! full schema when the client calls `tools/<tool>/schema`.  This cuts
 //! token usage by up to 90 %.
 
+pub mod auto_suspend;
 pub mod lazy_schema;
 pub mod registration;
+pub mod server;
 pub mod transport;
 
 use impforge_emergence::{

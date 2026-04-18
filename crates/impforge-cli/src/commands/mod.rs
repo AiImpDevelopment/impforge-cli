@@ -3,6 +3,7 @@
 
 pub mod audit;
 pub mod autopilot;
+pub mod bench;
 pub mod brain;
 pub mod contribute;
 pub mod crown_jewel;
@@ -12,6 +13,7 @@ pub mod generate;
 pub mod introspect;
 pub mod mcp;
 pub mod model;
+pub mod remote;
 pub mod skill;
 pub mod template;
 pub mod update;

@@ -13,6 +13,8 @@ members = [
     "crates/impforge-emergence",
     "crates/impforge-aiimp-updater",
     "crates/impforge-crown-jewel",
+    "crates/impforge-bench",
+    "crates/impforge-remote",
 ]
 
 [workspace.package]
