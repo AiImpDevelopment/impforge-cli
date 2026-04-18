@@ -1,0 +1,35 @@
+{
+  "category": "web",
+  "compliance": [
+    "FINRA",
+    "PCI-DSS",
+    "GDPR",
+    "SOC2",
+    "ISO-27001"
+  ],
+  "description": "Production-grade Next 15 + Tailwind 4 + shadcn/ui v2 scaffold tuned for FinTech and Banking front-office workflows (dashboards, KYC, compliance back-office).",
+  "framework": "next-15",
+  "id": "fintech-web",
+  "industry": "fintech",
+  "language": "typescript",
+  "license": "MIT",
+  "name": "FinTech Web App (Next 15)",
+  "preview": {
+    "command": "bun install && bun run dev",
+    "ready_timeout": 30000,
+    "ready_url": "http://localhost:3000"
+  },
+  "production": {
+    "build_command": "bun run build"
+  },
+  "safety_class": "t1_filesystem",
+  "spec_version": "1",
+  "tags": [
+    "fintech",
+    "web",
+    "next-15",
+    "tailwind",
+    "shadcn"
+  ],
+  "version": "0.1.0"
+}

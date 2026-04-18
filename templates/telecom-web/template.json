@@ -1,0 +1,36 @@
+{
+  "category": "web",
+  "compliance": [
+    "FCC",
+    "CALEA",
+    "CPNI",
+    "TCPA",
+    "GDPR",
+    "WCAG"
+  ],
+  "description": "Svelte 5 + Tailwind 4 + Bits UI scaffold for telecom NOC dashboards, outage maps, and customer self-service portals with FCC + CALEA + CPNI awareness.",
+  "framework": "svelte-5",
+  "id": "telecom-web",
+  "industry": "telecom",
+  "language": "typescript",
+  "license": "MIT",
+  "name": "Telecom NOC Web (Svelte 5)",
+  "preview": {
+    "command": "bun install && bun run dev",
+    "ready_timeout": 30000,
+    "ready_url": "http://localhost:5173"
+  },
+  "production": {
+    "build_command": "bun run build"
+  },
+  "safety_class": "t1_filesystem",
+  "spec_version": "1",
+  "tags": [
+    "telecom",
+    "web",
+    "svelte-5",
+    "noc",
+    "outage"
+  ],
+  "version": "0.1.0"
+}

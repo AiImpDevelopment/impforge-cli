@@ -1,0 +1,35 @@
+{
+  "category": "web",
+  "compliance": [
+    "GDPR",
+    "ABA-MRPC",
+    "ISO-27001",
+    "SOC2",
+    "EPRIVACY"
+  ],
+  "description": "Vue 3.5 + Tailwind 4 + ark-ui scaffold for law firm marketing, matter intake, conflict-check portals, and client-facing case dashboards.",
+  "framework": "vue-3.5",
+  "id": "legal-web",
+  "industry": "legal",
+  "language": "typescript",
+  "license": "MIT",
+  "name": "Legal Web App (Vue 3.5)",
+  "preview": {
+    "command": "bun install && bun run dev",
+    "ready_timeout": 30000,
+    "ready_url": "http://localhost:5173"
+  },
+  "production": {
+    "build_command": "bun run build"
+  },
+  "safety_class": "t1_filesystem",
+  "spec_version": "1",
+  "tags": [
+    "legal",
+    "web",
+    "vue-3.5",
+    "law-firm",
+    "matter-management"
+  ],
+  "version": "0.1.0"
+}

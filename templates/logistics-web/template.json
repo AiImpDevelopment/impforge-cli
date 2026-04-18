@@ -1,0 +1,35 @@
+{
+  "category": "web",
+  "compliance": [
+    "DOT-FMCSA",
+    "GDPR",
+    "ADA",
+    "WCAG",
+    "OSHA"
+  ],
+  "description": "Remix 3 + Tailwind 4 + shadcn/ui v2 scaffold for logistics fleet dashboards, shipment tracking, and DOT-compliant driver portals with real-time loaders.",
+  "framework": "remix-3",
+  "id": "logistics-web",
+  "industry": "logistics",
+  "language": "typescript",
+  "license": "MIT",
+  "name": "Logistics Web (Remix 3)",
+  "preview": {
+    "command": "bun install && bun run dev",
+    "ready_timeout": 30000,
+    "ready_url": "http://localhost:5173"
+  },
+  "production": {
+    "build_command": "bun run build"
+  },
+  "safety_class": "t1_filesystem",
+  "spec_version": "1",
+  "tags": [
+    "logistics",
+    "web",
+    "remix-3",
+    "fleet",
+    "tracking"
+  ],
+  "version": "0.1.0"
+}

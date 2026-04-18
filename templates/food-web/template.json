@@ -1,0 +1,35 @@
+{
+  "category": "web",
+  "compliance": [
+    "FDA",
+    "FALCPA",
+    "ADA",
+    "WCAG",
+    "GDPR"
+  ],
+  "description": "Svelte 5 + Tailwind 4 + bits-ui scaffold for restaurant POS, online ordering, and food brand marketing sites with FDA labeling and FSMA traceability awareness.",
+  "framework": "svelte-5",
+  "id": "food-web",
+  "industry": "food",
+  "language": "typescript",
+  "license": "MIT",
+  "name": "Food Web (Svelte 5)",
+  "preview": {
+    "command": "bun install && bun run dev",
+    "ready_timeout": 30000,
+    "ready_url": "http://localhost:5173"
+  },
+  "production": {
+    "build_command": "bun run build"
+  },
+  "safety_class": "t1_filesystem",
+  "spec_version": "1",
+  "tags": [
+    "food",
+    "web",
+    "svelte-5",
+    "restaurant",
+    "pos"
+  ],
+  "version": "0.1.0"
+}

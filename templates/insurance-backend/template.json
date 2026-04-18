@@ -1,0 +1,35 @@
+{
+  "category": "backend",
+  "compliance": [
+    "NAIC",
+    "SOLVENCY-II",
+    "GDPR",
+    "SOC2",
+    "ISO-27001"
+  ],
+  "description": "Postgres 17 backend with insurance-flavored seed migration (policy, claim, reserve_calc) and read-replica routing default.",
+  "framework": "rust-1.95",
+  "id": "insurance-backend",
+  "industry": "insurance",
+  "language": "rust",
+  "license": "MIT",
+  "name": "Insurance Backend (Postgres 17)",
+  "preview": {
+    "command": "cargo run",
+    "ready_timeout": 30000,
+    "ready_url": "http://localhost:8080"
+  },
+  "production": {
+    "build_command": "cargo build --release"
+  },
+  "safety_class": "t1_filesystem",
+  "spec_version": "1",
+  "tags": [
+    "insurance",
+    "backend",
+    "postgres",
+    "naic",
+    "claims"
+  ],
+  "version": "0.1.0"
+}

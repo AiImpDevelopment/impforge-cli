@@ -1,0 +1,35 @@
+{
+  "category": "web",
+  "compliance": [
+    "NERC-CIP",
+    "GDPR",
+    "CCPA",
+    "ADA",
+    "WCAG"
+  ],
+  "description": "Vue 3.5 + Tailwind 4 + ark-ui scaffold for utility customer portals with billing, outage maps, usage dashboards, and Green Button data export.",
+  "framework": "vue-3.5",
+  "id": "energy-web",
+  "industry": "energy",
+  "language": "typescript",
+  "license": "MIT",
+  "name": "Energy Web (Vue 3.5)",
+  "preview": {
+    "command": "bun install && bun run dev",
+    "ready_timeout": 30000,
+    "ready_url": "http://localhost:5173"
+  },
+  "production": {
+    "build_command": "bun run build"
+  },
+  "safety_class": "t1_filesystem",
+  "spec_version": "1",
+  "tags": [
+    "energy",
+    "web",
+    "vue-3.5",
+    "utility",
+    "customer-portal"
+  ],
+  "version": "0.1.0"
+}

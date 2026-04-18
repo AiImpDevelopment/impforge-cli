@@ -1,0 +1,31 @@
+{
+  "statements": [
+    {
+      "sql": "CREATE TABLE public.audit_log (id uuid PRIMARY KEY, actor_id uuid NOT NULL, action text NOT NULL, occurred_at timestamptz NOT NULL DEFAULT now(), payload jsonb)",
+      "severity": "safe"
+    },
+    {
+      "sql": "CREATE TABLE public.ledger_entry (id uuid PRIMARY KEY, account_id uuid NOT NULL, amount_cents bigint NOT NULL, currency text NOT NULL, posted_at timestamptz NOT NULL DEFAULT now())",
+      "severity": "safe"
+    },
+    {
+      "sql": "CREATE TABLE public.rate_limit (key text PRIMARY KEY, hits integer NOT NULL DEFAULT 0, window_start timestamptz NOT NULL)",
+      "severity": "safe"
+    },
+    {
+      "sql": "CREATE INDEX audit_log_actor_idx ON public.audit_log (actor_id, occurred_at DESC)",
+      "severity": "safe"
+    },
+    {
+      "sql": "CREATE INDEX ledger_entry_account_idx ON public.ledger_entry (account_id, posted_at DESC)",
+      "severity": "safe"
+    }
+  ],
+  "envKeys": [
+    "DATABASE_URL",
+    "DATABASE_URL_READONLY"
+  ],
+  "recommendedTargetUrlKey": "DATABASE_URL",
+  "destructiveCount": 0,
+  "riskyCount": 0
+}

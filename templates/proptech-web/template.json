@@ -1,0 +1,37 @@
+{
+  "category": "web",
+  "compliance": [
+    "FAIR-HOUSING",
+    "FCRA",
+    "ECOA",
+    "ADA-TITLE-III",
+    "GDPR",
+    "CCPA",
+    "WCAG"
+  ],
+  "description": "Svelte 5 + Tailwind 4 + Bits UI scaffold for tenant self-service, rental applications, and owner dashboards with Fair Housing + FCRA + ECOA awareness.",
+  "framework": "svelte-5",
+  "id": "proptech-web",
+  "industry": "proptech",
+  "language": "typescript",
+  "license": "MIT",
+  "name": "PropTech Tenant / Owner Portal Web (Svelte 5)",
+  "preview": {
+    "command": "bun install && bun run dev",
+    "ready_timeout": 30000,
+    "ready_url": "http://localhost:5173"
+  },
+  "production": {
+    "build_command": "bun run build"
+  },
+  "safety_class": "t1_filesystem",
+  "spec_version": "1",
+  "tags": [
+    "proptech",
+    "web",
+    "svelte-5",
+    "tenant-portal",
+    "rental"
+  ],
+  "version": "0.1.0"
+}

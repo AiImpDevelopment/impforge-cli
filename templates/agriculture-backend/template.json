@@ -1,0 +1,34 @@
+{
+  "category": "backend",
+  "compliance": [
+    "USDA",
+    "FDA-FSMA",
+    "EPA-FIFRA",
+    "GDPR",
+    "SOC2"
+  ],
+  "description": "Postgres 17 backend with agriculture-flavored seed migration (field, crop_lot, pesticide_application) for FSMA traceability and EPA WPS compliance.",
+  "framework": "rust-1.95",
+  "id": "agriculture-backend",
+  "industry": "agriculture",
+  "language": "rust",
+  "license": "MIT",
+  "name": "Agriculture Backend (Postgres 17)",
+  "preview": {
+    "command": "cargo run",
+    "ready_timeout": 30000,
+    "ready_url": "http://localhost:8080"
+  },
+  "production": {
+    "build_command": "cargo build --release"
+  },
+  "safety_class": "t1_filesystem",
+  "spec_version": "1",
+  "tags": [
+    "agriculture",
+    "backend",
+    "postgres",
+    "traceability"
+  ],
+  "version": "0.1.0"
+}

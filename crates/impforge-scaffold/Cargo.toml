@@ -1,0 +1,23 @@
+# SPDX-License-Identifier: MIT
+[package]
+name = "impforge-scaffold"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+homepage.workspace = true
+repository.workspace = true
+description = "Template scaffolding engine for impforge-cli — copies a bundled template into a user-specified directory."
+readme = "../../README.md"
+
+[dependencies]
+impforge-core = { path = "../impforge-core" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+walkdir = { workspace = true }
+tempfile = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+sha2 = { workspace = true }
+hex = { workspace = true }

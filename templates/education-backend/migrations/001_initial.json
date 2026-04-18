@@ -1,0 +1,31 @@
+{
+  "statements": [
+    {
+      "sql": "CREATE TABLE public.enrollment (id uuid PRIMARY KEY, student_id uuid NOT NULL, course_id uuid NOT NULL, term text NOT NULL, enrolled_at timestamptz NOT NULL DEFAULT now(), withdrawn_at timestamptz)",
+      "severity": "safe"
+    },
+    {
+      "sql": "CREATE TABLE public.grade_record (id uuid PRIMARY KEY, student_id uuid NOT NULL, course_id uuid NOT NULL, grade text NOT NULL, posted_at timestamptz NOT NULL DEFAULT now(), posted_by uuid NOT NULL)",
+      "severity": "safe"
+    },
+    {
+      "sql": "CREATE TABLE public.transcript_lock (id uuid PRIMARY KEY, student_id uuid NOT NULL, locked_at timestamptz NOT NULL DEFAULT now(), reason text NOT NULL)",
+      "severity": "safe"
+    },
+    {
+      "sql": "CREATE INDEX enrollment_student_idx ON public.enrollment (student_id, term)",
+      "severity": "safe"
+    },
+    {
+      "sql": "CREATE INDEX grade_record_student_idx ON public.grade_record (student_id, course_id)",
+      "severity": "safe"
+    }
+  ],
+  "envKeys": [
+    "DATABASE_URL",
+    "DATABASE_URL_READONLY"
+  ],
+  "recommendedTargetUrlKey": "DATABASE_URL",
+  "destructiveCount": 0,
+  "riskyCount": 0
+}

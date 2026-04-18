@@ -1,0 +1,36 @@
+{
+  "category": "saas",
+  "compliance": [
+    "FEDRAMP",
+    "FISMA",
+    "NIST-800-53",
+    "SECTION-508",
+    "WCAG",
+    "PRIVACY-ACT"
+  ],
+  "description": "Multi-tenant SaaS for federal / state agencies with program / grant / case tables, WorkOS SSO + PIV-ready auth, and appropriation-based billing scaffolds.",
+  "framework": "next-15",
+  "id": "government-saas",
+  "industry": "government",
+  "language": "typescript",
+  "license": "MIT",
+  "name": "Government Multi-Agency SaaS",
+  "preview": {
+    "command": "bun install && bun run dev",
+    "ready_timeout": 30000,
+    "ready_url": "http://localhost:3000"
+  },
+  "production": {
+    "build_command": "bun run build"
+  },
+  "safety_class": "t2_network",
+  "spec_version": "1",
+  "tags": [
+    "government",
+    "saas",
+    "fedramp",
+    "agency",
+    "public-sector"
+  ],
+  "version": "0.1.0"
+}

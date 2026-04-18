@@ -1,0 +1,36 @@
+{
+  "category": "saas",
+  "compliance": [
+    "FERPA",
+    "COPPA",
+    "GDPR",
+    "SOC2",
+    "ISO-27001",
+    "ADA"
+  ],
+  "description": "Multi-tenant LMS / SIS scaffold for school districts and university systems with FERPA-compliant tenant isolation, OAuth 2.1 + PKCE auth, and Stripe billing.",
+  "framework": "next-15",
+  "id": "education-saas",
+  "industry": "education",
+  "language": "typescript",
+  "license": "MIT",
+  "name": "Education Multi-Tenant SaaS",
+  "preview": {
+    "command": "bun install && bun run dev",
+    "ready_timeout": 30000,
+    "ready_url": "http://localhost:3000"
+  },
+  "production": {
+    "build_command": "bun run build"
+  },
+  "safety_class": "t1_filesystem",
+  "spec_version": "1",
+  "tags": [
+    "education",
+    "saas",
+    "lms",
+    "sis",
+    "ferpa"
+  ],
+  "version": "0.1.0"
+}

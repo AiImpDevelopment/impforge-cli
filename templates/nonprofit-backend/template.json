@@ -1,0 +1,35 @@
+{
+  "category": "backend",
+  "compliance": [
+    "IRS-501C3",
+    "IRS",
+    "GDPR",
+    "SOC2",
+    "GAAP"
+  ],
+  "description": "Postgres 17 backend with nonprofit-flavored seed migration (donor, donation, grant_award) for IRS Form 990 reporting and donor acknowledgment.",
+  "framework": "rust-1.95",
+  "id": "nonprofit-backend",
+  "industry": "nonprofit",
+  "language": "rust",
+  "license": "MIT",
+  "name": "Nonprofit Backend (Postgres 17)",
+  "preview": {
+    "command": "cargo run",
+    "ready_timeout": 30000,
+    "ready_url": "http://localhost:8080"
+  },
+  "production": {
+    "build_command": "cargo build --release"
+  },
+  "safety_class": "t1_filesystem",
+  "spec_version": "1",
+  "tags": [
+    "nonprofit",
+    "backend",
+    "postgres",
+    "donors",
+    "grants"
+  ],
+  "version": "0.1.0"
+}

@@ -1,0 +1,31 @@
+{
+  "statements": [
+    {
+      "sql": "CREATE TABLE public.project (id uuid PRIMARY KEY, owner_id uuid NOT NULL, name text NOT NULL, location text NOT NULL, started_at timestamptz NOT NULL DEFAULT now(), completed_at timestamptz)",
+      "severity": "safe"
+    },
+    {
+      "sql": "CREATE TABLE public.bid (id uuid PRIMARY KEY, project_id uuid NOT NULL, contractor_id uuid NOT NULL, amount_cents bigint NOT NULL, submitted_at timestamptz NOT NULL DEFAULT now(), accepted_at timestamptz)",
+      "severity": "safe"
+    },
+    {
+      "sql": "CREATE TABLE public.change_order (id uuid PRIMARY KEY, project_id uuid NOT NULL, description text NOT NULL, amount_cents bigint NOT NULL, approved_at timestamptz)",
+      "severity": "safe"
+    },
+    {
+      "sql": "CREATE INDEX project_owner_idx ON public.project (owner_id, started_at DESC)",
+      "severity": "safe"
+    },
+    {
+      "sql": "CREATE INDEX bid_project_idx ON public.bid (project_id, submitted_at DESC)",
+      "severity": "safe"
+    }
+  ],
+  "envKeys": [
+    "DATABASE_URL",
+    "DATABASE_URL_READONLY"
+  ],
+  "recommendedTargetUrlKey": "DATABASE_URL",
+  "destructiveCount": 0,
+  "riskyCount": 0
+}

@@ -1,0 +1,35 @@
+{
+  "category": "saas",
+  "compliance": [
+    "USDA",
+    "FDA-FSMA",
+    "EPA-FIFRA",
+    "GDPR",
+    "SOC2",
+    "ISO-27001"
+  ],
+  "description": "Multi-tenant SaaS scaffold for farms and agribusiness with field/crop/yield tracking, FSMA traceability lots, OAuth 2.1 + PKCE auth, and Stripe billing.",
+  "framework": "next-15",
+  "id": "agriculture-saas",
+  "industry": "agriculture",
+  "language": "typescript",
+  "license": "MIT",
+  "name": "Agriculture Multi-Tenant SaaS",
+  "preview": {
+    "command": "bun install && bun run dev",
+    "ready_timeout": 30000,
+    "ready_url": "http://localhost:3000"
+  },
+  "production": {
+    "build_command": "bun run build"
+  },
+  "safety_class": "t1_filesystem",
+  "spec_version": "1",
+  "tags": [
+    "agriculture",
+    "saas",
+    "farm-management",
+    "traceability"
+  ],
+  "version": "0.1.0"
+}

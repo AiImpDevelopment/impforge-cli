@@ -1,0 +1,36 @@
+{
+  "category": "backend",
+  "compliance": [
+    "FEDRAMP",
+    "FISMA",
+    "NIST-800-171",
+    "PRIVACY-ACT",
+    "FOIA",
+    "SOC2"
+  ],
+  "description": "Postgres 17 backend with government seed migration (program, grant, case, public_record) for FedRAMP / FISMA-aligned agency systems.",
+  "framework": "rust-1.95",
+  "id": "government-backend",
+  "industry": "government",
+  "language": "rust",
+  "license": "MIT",
+  "name": "Government Backend (Postgres 17)",
+  "preview": {
+    "command": "cargo run",
+    "ready_timeout": 30000,
+    "ready_url": "http://localhost:8080"
+  },
+  "production": {
+    "build_command": "cargo build --release"
+  },
+  "safety_class": "t2_network",
+  "spec_version": "1",
+  "tags": [
+    "government",
+    "backend",
+    "postgres",
+    "fedramp",
+    "agency"
+  ],
+  "version": "0.1.0"
+}

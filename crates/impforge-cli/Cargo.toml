@@ -1,0 +1,54 @@
+# SPDX-License-Identifier: MIT
+[package]
+name = "impforge-cli"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+homepage.workspace = true
+repository.workspace = true
+description = "MCP-native AI coding companion · 78 templates · 2 600 compliance rules · works with every AI tool · local-model-first · MIT"
+readme = "../../README.md"
+
+[[bin]]
+name = "impforge-cli"
+path = "src/main.rs"
+
+[features]
+default = ["minimal"]
+# Minimal binary — <3 MB, no TUI / Candle / llama.cpp.
+minimal = []
+# Beautiful TUI dashboard.
+tui = ["dep:ratatui", "dep:crossterm"]
+# Pure-Rust inference via Candle.
+candle = []
+# GGUF inference via llama.cpp FFI.
+llamacpp = []
+# Everything (used for `cargo install --features full`).
+full = ["tui", "candle", "llamacpp"]
+
+[dependencies]
+impforge-core = { path = "../impforge-core" }
+impforge-emergence = { path = "../impforge-emergence" }
+impforge-scaffold = { path = "../impforge-scaffold" }
+impforge-models = { path = "../impforge-models" }
+impforge-mcp-server = { path = "../impforge-mcp-server" }
+impforge-contribute = { path = "../impforge-contribute" }
+impforge-export = { path = "../impforge-export" }
+impforge-autonomy = { path = "../impforge-autonomy" }
+
+clap = { workspace = true }
+indicatif = { workspace = true }
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+chrono = { workspace = true }
+
+# Optional TUI
+ratatui = { workspace = true, optional = true }
+crossterm = { workspace = true, optional = true }

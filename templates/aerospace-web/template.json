@@ -1,0 +1,35 @@
+{
+  "category": "web",
+  "compliance": [
+    "FAA-PART-145",
+    "EASA-PART-145",
+    "AS9100",
+    "GDPR",
+    "WCAG"
+  ],
+  "description": "Remix 3 + Tailwind 4 + shadcn/ui v2 scaffold for aerospace MRO dashboards, fleet status displays, and AS9100/AS9110-aware operations.",
+  "framework": "remix-3",
+  "id": "aerospace-web",
+  "industry": "aerospace",
+  "language": "typescript",
+  "license": "MIT",
+  "name": "Aerospace Web (Remix 3)",
+  "preview": {
+    "command": "bun install && bun run dev",
+    "ready_timeout": 30000,
+    "ready_url": "http://localhost:5173"
+  },
+  "production": {
+    "build_command": "bun run build"
+  },
+  "safety_class": "t1_filesystem",
+  "spec_version": "1",
+  "tags": [
+    "aerospace",
+    "web",
+    "remix-3",
+    "mro",
+    "fleet"
+  ],
+  "version": "0.1.0"
+}

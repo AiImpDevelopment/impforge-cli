@@ -1,0 +1,20 @@
+# SPDX-License-Identifier: MIT
+[package]
+name = "impforge-contribute"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+homepage.workspace = true
+repository.workspace = true
+description = "Interactive community-contribution wizard with local validation (schema + security-scan + prompt-injection-scrubber) before GitHub PR submission."
+readme = "../../README.md"
+
+[dependencies]
+impforge-core = { path = "../impforge-core" }
+impforge-emergence = { path = "../impforge-emergence" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }

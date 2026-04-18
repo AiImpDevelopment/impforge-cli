@@ -1,0 +1,34 @@
+{
+  "category": "backend",
+  "compliance": [
+    "EPA-TIER-4",
+    "ISO-9001",
+    "GDPR",
+    "SOC2"
+  ],
+  "description": "Postgres 17 backend with engines-flavored seed migration (engine_part, qa_inspection, emission_test) for engine production and certification.",
+  "framework": "rust-1.95",
+  "id": "engines-backend",
+  "industry": "engines",
+  "language": "rust",
+  "license": "MIT",
+  "name": "Engines Backend (Postgres 17)",
+  "preview": {
+    "command": "cargo run",
+    "ready_timeout": 30000,
+    "ready_url": "http://localhost:8080"
+  },
+  "production": {
+    "build_command": "cargo build --release"
+  },
+  "safety_class": "t1_filesystem",
+  "spec_version": "1",
+  "tags": [
+    "engines",
+    "backend",
+    "postgres",
+    "qa",
+    "emission-test"
+  ],
+  "version": "0.1.0"
+}

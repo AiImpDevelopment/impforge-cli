@@ -1,0 +1,31 @@
+{
+  "statements": [
+    {
+      "sql": "CREATE TABLE public.content_asset (id uuid PRIMARY KEY, kind text NOT NULL, title text NOT NULL, creator_id uuid NOT NULL, published_at timestamptz, license text NOT NULL DEFAULT 'all_rights_reserved')",
+      "severity": "safe"
+    },
+    {
+      "sql": "CREATE TABLE public.ad_placement (id uuid PRIMARY KEY, asset_id uuid NOT NULL, advertiser_id uuid NOT NULL, slot text NOT NULL, served_at timestamptz NOT NULL DEFAULT now(), revenue_cents bigint NOT NULL DEFAULT 0)",
+      "severity": "safe"
+    },
+    {
+      "sql": "CREATE TABLE public.royalty_split (id uuid PRIMARY KEY, asset_id uuid NOT NULL, beneficiary_id uuid NOT NULL, percent numeric(5,2) NOT NULL, effective_at timestamptz NOT NULL DEFAULT now())",
+      "severity": "safe"
+    },
+    {
+      "sql": "CREATE INDEX content_asset_creator_idx ON public.content_asset (creator_id, published_at DESC)",
+      "severity": "safe"
+    },
+    {
+      "sql": "CREATE INDEX ad_placement_asset_idx ON public.ad_placement (asset_id, served_at DESC)",
+      "severity": "safe"
+    }
+  ],
+  "envKeys": [
+    "DATABASE_URL",
+    "DATABASE_URL_READONLY"
+  ],
+  "recommendedTargetUrlKey": "DATABASE_URL",
+  "destructiveCount": 0,
+  "riskyCount": 0
+}

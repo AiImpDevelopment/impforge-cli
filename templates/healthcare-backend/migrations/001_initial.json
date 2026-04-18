@@ -1,0 +1,31 @@
+{
+  "statements": [
+    {
+      "sql": "CREATE TABLE public.phi_access_log (id uuid PRIMARY KEY, accessor_id uuid NOT NULL, patient_id uuid NOT NULL, accessed_at timestamptz NOT NULL DEFAULT now(), purpose text NOT NULL)",
+      "severity": "safe"
+    },
+    {
+      "sql": "CREATE TABLE public.consent_record (id uuid PRIMARY KEY, patient_id uuid NOT NULL, consent_type text NOT NULL, granted_at timestamptz NOT NULL DEFAULT now(), revoked_at timestamptz)",
+      "severity": "safe"
+    },
+    {
+      "sql": "CREATE TABLE public.encryption_audit (id uuid PRIMARY KEY, resource_id uuid NOT NULL, key_version integer NOT NULL, rotated_at timestamptz NOT NULL DEFAULT now())",
+      "severity": "safe"
+    },
+    {
+      "sql": "CREATE INDEX phi_access_log_patient_idx ON public.phi_access_log (patient_id, accessed_at DESC)",
+      "severity": "safe"
+    },
+    {
+      "sql": "CREATE INDEX consent_record_patient_idx ON public.consent_record (patient_id, consent_type)",
+      "severity": "safe"
+    }
+  ],
+  "envKeys": [
+    "DATABASE_URL",
+    "DATABASE_URL_READONLY"
+  ],
+  "recommendedTargetUrlKey": "DATABASE_URL",
+  "destructiveCount": 0,
+  "riskyCount": 0
+}

@@ -1,0 +1,31 @@
+# SPDX-License-Identifier: MIT
+[package]
+name = "impforge-models"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+homepage.workspace = true
+repository.workspace = true
+description = "Unified local-model client for impforge-cli — Ollama HTTP, HuggingFace Hub, optional llama.cpp FFI + Candle."
+readme = "../../README.md"
+
+[features]
+default = []
+candle = []
+llamacpp = []
+
+[dependencies]
+impforge-core = { path = "../impforge-core" }
+impforge-emergence = { path = "../impforge-emergence" }
+ollama-rs = { workspace = true }
+hf-hub = { workspace = true }
+reqwest = { workspace = true }
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+tracing = { workspace = true }
+chrono = { workspace = true }

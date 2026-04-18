@@ -1,0 +1,7 @@
+// SPDX-License-Identifier: MIT
+// Originally rendered by ImpForge — https://github.com/AiImpDevelopment/impforge
+CREATE TABLE public.vehicle_model (id uuid PRIMARY KEY, vin_pattern text NOT NULL, model_year integer NOT NULL, make text NOT NULL, model text NOT NULL, ev boolean NOT NULL DEFAULT false);
+CREATE TABLE public.recall_notice (id uuid PRIMARY KEY, model_id uuid NOT NULL, nhtsa_id text NOT NULL UNIQUE, defect_summary text NOT NULL, posted_at timestamptz NOT NULL DEFAULT now());
+CREATE TABLE public.warranty_claim (id uuid PRIMARY KEY, vin text NOT NULL, model_id uuid NOT NULL, claim_amount_cents bigint NOT NULL, submitted_at timestamptz NOT NULL DEFAULT now(), approved_at timestamptz);
+CREATE INDEX vehicle_model_year_idx ON public.vehicle_model (model_year, make);
+CREATE INDEX warranty_claim_vin_idx ON public.warranty_claim (vin, submitted_at DESC);

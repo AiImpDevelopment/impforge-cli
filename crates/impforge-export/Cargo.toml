@@ -1,0 +1,25 @@
+# SPDX-License-Identifier: MIT
+[package]
+name = "impforge-export"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+homepage.workspace = true
+repository.workspace = true
+description = "Ed25519-signed config export for migration from impforge-cli (free) to impforge-aiimp (Pro)."
+readme = "../../README.md"
+
+[dependencies]
+impforge-core = { path = "../impforge-core" }
+impforge-emergence = { path = "../impforge-emergence" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+sha2 = { workspace = true }
+ed25519-dalek = { workspace = true }
+hex = { workspace = true }
+rand = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+chrono = { workspace = true }

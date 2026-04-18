@@ -1,0 +1,35 @@
+{
+  "category": "web",
+  "compliance": [
+    "FERPA",
+    "COPPA",
+    "GDPR",
+    "ADA",
+    "WCAG"
+  ],
+  "description": "Svelte 5 + Tailwind 4 + bits-ui scaffold for FERPA-aware LMS portals, parent dashboards, and student-facing education web applications.",
+  "framework": "svelte-5",
+  "id": "education-web",
+  "industry": "education",
+  "language": "typescript",
+  "license": "MIT",
+  "name": "Education Web App (Svelte 5)",
+  "preview": {
+    "command": "bun install && bun run dev",
+    "ready_timeout": 30000,
+    "ready_url": "http://localhost:5173"
+  },
+  "production": {
+    "build_command": "bun run build"
+  },
+  "safety_class": "t1_filesystem",
+  "spec_version": "1",
+  "tags": [
+    "education",
+    "web",
+    "svelte-5",
+    "ferpa",
+    "lms"
+  ],
+  "version": "0.1.0"
+}

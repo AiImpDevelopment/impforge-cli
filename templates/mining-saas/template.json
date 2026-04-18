@@ -1,0 +1,36 @@
+{
+  "category": "saas",
+  "compliance": [
+    "MSHA",
+    "ICMM",
+    "GISTM",
+    "ISO-14001",
+    "ISO-45001",
+    "SOC2"
+  ],
+  "description": "Multi-tenant SaaS for mining operators with shift / equipment / tailings tables, OAuth 2.1 auth, and Stripe-billed per-site subscriptions.",
+  "framework": "next-15",
+  "id": "mining-saas",
+  "industry": "mining",
+  "language": "typescript",
+  "license": "MIT",
+  "name": "Mining Operator SaaS",
+  "preview": {
+    "command": "bun install && bun run dev",
+    "ready_timeout": 30000,
+    "ready_url": "http://localhost:3000"
+  },
+  "production": {
+    "build_command": "bun run build"
+  },
+  "safety_class": "t1_filesystem",
+  "spec_version": "1",
+  "tags": [
+    "mining",
+    "saas",
+    "operator",
+    "tailings",
+    "equipment"
+  ],
+  "version": "0.1.0"
+}

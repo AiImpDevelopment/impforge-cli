@@ -1,0 +1,23 @@
+# SPDX-License-Identifier: MIT
+[package]
+name = "impforge-emergence"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+homepage.workspace = true
+repository.workspace = true
+description = "Neural-Trias-Lite — the intelligent runtime layer for impforge-cli.  Every crate in the workspace registers as a Module with capability discovery, episodic memory, health monitoring, and self-heal hooks."
+readme = "../../README.md"
+
+[dependencies]
+impforge-core = { path = "../impforge-core" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+tokio = { workspace = true }
+chrono = { workspace = true }
+uuid = { workspace = true }
+tracing = { workspace = true }

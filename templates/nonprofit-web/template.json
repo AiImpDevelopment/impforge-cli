@@ -1,0 +1,35 @@
+{
+  "category": "web",
+  "compliance": [
+    "IRS-501C3",
+    "GDPR",
+    "ADA",
+    "WCAG",
+    "CCPA"
+  ],
+  "description": "Vue 3.5 + Tailwind 4 + ark-ui scaffold for nonprofit donor portals, campaign landing pages, and impact reports with IRS Schedule O transparency.",
+  "framework": "vue-3.5",
+  "id": "nonprofit-web",
+  "industry": "nonprofit",
+  "language": "typescript",
+  "license": "MIT",
+  "name": "Nonprofit Web (Vue 3.5)",
+  "preview": {
+    "command": "bun install && bun run dev",
+    "ready_timeout": 30000,
+    "ready_url": "http://localhost:5173"
+  },
+  "production": {
+    "build_command": "bun run build"
+  },
+  "safety_class": "t1_filesystem",
+  "spec_version": "1",
+  "tags": [
+    "nonprofit",
+    "web",
+    "vue-3.5",
+    "donor-portal",
+    "fundraising"
+  ],
+  "version": "0.1.0"
+}

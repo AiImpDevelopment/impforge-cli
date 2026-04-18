@@ -1,0 +1,36 @@
+{
+  "category": "web",
+  "compliance": [
+    "IMO-SOLAS",
+    "MARPOL",
+    "ISPS-CODE",
+    "ISM-CODE",
+    "MLC-2006",
+    "WCAG"
+  ],
+  "description": "Astro 5 + Tailwind 4 + shadcn/ui scaffold for maritime port operations, vessel tracking, and cargo manifest portals with IMO SOLAS + MARPOL + ISPS awareness.",
+  "framework": "astro-5",
+  "id": "maritime-web",
+  "industry": "maritime",
+  "language": "typescript",
+  "license": "MIT",
+  "name": "Maritime Port Ops Web (Astro 5)",
+  "preview": {
+    "command": "bun install && bun run dev",
+    "ready_timeout": 30000,
+    "ready_url": "http://localhost:5173"
+  },
+  "production": {
+    "build_command": "bun run build"
+  },
+  "safety_class": "t1_filesystem",
+  "spec_version": "1",
+  "tags": [
+    "maritime",
+    "web",
+    "astro-5",
+    "port-ops",
+    "vessel"
+  ],
+  "version": "0.1.0"
+}

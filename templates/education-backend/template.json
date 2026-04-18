@@ -1,0 +1,34 @@
+{
+  "category": "backend",
+  "compliance": [
+    "FERPA",
+    "GDPR",
+    "SOC2",
+    "ISO-27001"
+  ],
+  "description": "Postgres 17 backend with FERPA-aware seed migration (enrollment, grade_record, transcript_lock) and read-replica routing default.",
+  "framework": "rust-1.95",
+  "id": "education-backend",
+  "industry": "education",
+  "language": "rust",
+  "license": "MIT",
+  "name": "Education Backend (Postgres 17)",
+  "preview": {
+    "command": "cargo run",
+    "ready_timeout": 30000,
+    "ready_url": "http://localhost:8080"
+  },
+  "production": {
+    "build_command": "cargo build --release"
+  },
+  "safety_class": "t1_filesystem",
+  "spec_version": "1",
+  "tags": [
+    "education",
+    "backend",
+    "postgres",
+    "ferpa",
+    "sis"
+  ],
+  "version": "0.1.0"
+}

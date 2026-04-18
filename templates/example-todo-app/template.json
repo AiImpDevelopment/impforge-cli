@@ -1,0 +1,38 @@
+{
+  "$schema": "https://raw.githubusercontent.com/AiImpDevelopment/impforge-mcp-manifests/main/schemas/template.v1.schema.json",
+  "spec_version": "1",
+  "id": "example-todo-app",
+  "name": "Example — Todo App",
+  "description": "Reference template demonstrating the template.json v1 spec — minimal Svelte 5 + Tailwind 4 + Bun todo application. Use this as a starting point for your own templates.",
+  "category": "single_page",
+  "industry": "general",
+  "framework": "svelte-5",
+  "language": "typescript",
+  "license": "MIT",
+  "version": "1.0.0",
+  "tags": ["example", "reference", "spec-conformance", "tutorial"],
+  "homepage": "https://github.com/AiImpDevelopment/impforge-templates/tree/main/templates/example-todo-app",
+  "repository": "https://github.com/AiImpDevelopment/impforge-templates",
+  "compliance": [],
+  "safety_class": "t1_filesystem",
+  "preview": {
+    "command": "bun run dev",
+    "ready_url": "http://localhost:5173",
+    "ready_timeout": 30000
+  },
+  "production": {
+    "build_command": "bun run build",
+    "output_path": "build",
+    "deploy_targets": ["vercel", "netlify", "self-hosted"]
+  },
+  "tests": {
+    "command": "bun test",
+    "coverage_floor_pct": 0
+  },
+  "ai_metadata": {
+    "summary_for_llm": "A minimal Svelte 5 todo app — perfect to demonstrate how template.json v1 manifests describe a scaffold that any AI tool can pick up. Use this as a learning example before building your own templates.",
+    "trigger_keywords": ["example", "tutorial", "todo", "svelte", "minimal", "reference"],
+    "estimated_complexity": "trivial",
+    "estimated_minutes_to_run": 1
+  }
+}

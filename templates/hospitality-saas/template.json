@@ -1,0 +1,35 @@
+{
+  "category": "saas",
+  "compliance": [
+    "PCI-DSS",
+    "GDPR",
+    "ADA",
+    "SOC2",
+    "ISO-27001",
+    "CCPA"
+  ],
+  "description": "Multi-tenant SaaS scaffold for hotel and restaurant chains with PMS / reservation / housekeeping tables, OAuth 2.1 + PKCE auth, and Stripe-billed B2B subscriptions.",
+  "framework": "next-15",
+  "id": "hospitality-saas",
+  "industry": "hospitality",
+  "language": "typescript",
+  "license": "MIT",
+  "name": "Hospitality Multi-Tenant SaaS",
+  "preview": {
+    "command": "bun install && bun run dev",
+    "ready_timeout": 30000,
+    "ready_url": "http://localhost:3000"
+  },
+  "production": {
+    "build_command": "bun run build"
+  },
+  "safety_class": "t1_filesystem",
+  "spec_version": "1",
+  "tags": [
+    "hospitality",
+    "saas",
+    "pms",
+    "reservation"
+  ],
+  "version": "0.1.0"
+}

@@ -1,0 +1,31 @@
+{
+  "statements": [
+    {
+      "sql": "CREATE TABLE public.policy (id uuid PRIMARY KEY, policyholder_id uuid NOT NULL, policy_number text NOT NULL UNIQUE, effective_at timestamptz NOT NULL, expires_at timestamptz NOT NULL, premium_cents bigint NOT NULL)",
+      "severity": "safe"
+    },
+    {
+      "sql": "CREATE TABLE public.claim (id uuid PRIMARY KEY, policy_id uuid NOT NULL, claimant_id uuid NOT NULL, reported_at timestamptz NOT NULL DEFAULT now(), status text NOT NULL, paid_cents bigint NOT NULL DEFAULT 0)",
+      "severity": "safe"
+    },
+    {
+      "sql": "CREATE TABLE public.reserve_calc (id uuid PRIMARY KEY, policy_id uuid NOT NULL, reserved_cents bigint NOT NULL, method text NOT NULL, calculated_at timestamptz NOT NULL DEFAULT now())",
+      "severity": "safe"
+    },
+    {
+      "sql": "CREATE INDEX policy_holder_idx ON public.policy (policyholder_id, effective_at DESC)",
+      "severity": "safe"
+    },
+    {
+      "sql": "CREATE INDEX claim_policy_idx ON public.claim (policy_id, reported_at DESC)",
+      "severity": "safe"
+    }
+  ],
+  "envKeys": [
+    "DATABASE_URL",
+    "DATABASE_URL_READONLY"
+  ],
+  "recommendedTargetUrlKey": "DATABASE_URL",
+  "destructiveCount": 0,
+  "riskyCount": 0
+}

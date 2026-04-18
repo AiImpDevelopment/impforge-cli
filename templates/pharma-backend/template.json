@@ -1,0 +1,35 @@
+{
+  "category": "backend",
+  "compliance": [
+    "FDA-21-CFR-PART-11",
+    "GAMP-5",
+    "HIPAA",
+    "GDPR",
+    "SOC2"
+  ],
+  "description": "Postgres 17 backend with pharma seed migration (study, subject, adverse_event) for GxP-compliant clinical data capture with Part 11 audit trails.",
+  "framework": "rust-1.95",
+  "id": "pharma-backend",
+  "industry": "pharma",
+  "language": "rust",
+  "license": "MIT",
+  "name": "Pharma Backend (Postgres 17)",
+  "preview": {
+    "command": "cargo run",
+    "ready_timeout": 30000,
+    "ready_url": "http://localhost:8080"
+  },
+  "production": {
+    "build_command": "cargo build --release"
+  },
+  "safety_class": "t2_network",
+  "spec_version": "1",
+  "tags": [
+    "pharma",
+    "backend",
+    "postgres",
+    "clinical",
+    "part-11"
+  ],
+  "version": "0.1.0"
+}

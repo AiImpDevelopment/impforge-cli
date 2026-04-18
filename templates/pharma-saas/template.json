@@ -1,0 +1,37 @@
+{
+  "category": "saas",
+  "compliance": [
+    "FDA-21-CFR-PART-11",
+    "ICH",
+    "EMA",
+    "GAMP-5",
+    "HIPAA",
+    "GDPR",
+    "SOC2"
+  ],
+  "description": "Multi-tenant SaaS for sponsors and CROs with study / site / subject tables, OAuth 2.1 + SSO for GxP roles, and Stripe-billed per-seat subscriptions.",
+  "framework": "next-15",
+  "id": "pharma-saas",
+  "industry": "pharma",
+  "language": "typescript",
+  "license": "MIT",
+  "name": "Pharma Clinical SaaS",
+  "preview": {
+    "command": "bun install && bun run dev",
+    "ready_timeout": 30000,
+    "ready_url": "http://localhost:3000"
+  },
+  "production": {
+    "build_command": "bun run build"
+  },
+  "safety_class": "t2_network",
+  "spec_version": "1",
+  "tags": [
+    "pharma",
+    "saas",
+    "sponsor",
+    "cro",
+    "clinical"
+  ],
+  "version": "0.1.0"
+}

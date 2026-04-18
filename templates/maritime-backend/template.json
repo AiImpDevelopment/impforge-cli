@@ -1,0 +1,35 @@
+{
+  "category": "backend",
+  "compliance": [
+    "IMO-SOLAS",
+    "MARPOL",
+    "ISPS-CODE",
+    "SOC2",
+    "ISO-27001"
+  ],
+  "description": "Postgres 17 backend with maritime seed migration (vessel, voyage, port_call, cargo) for IMO SOLAS / MARPOL-aligned shipping operations.",
+  "framework": "rust-1.95",
+  "id": "maritime-backend",
+  "industry": "maritime",
+  "language": "rust",
+  "license": "MIT",
+  "name": "Maritime Backend (Postgres 17)",
+  "preview": {
+    "command": "cargo run",
+    "ready_timeout": 30000,
+    "ready_url": "http://localhost:8080"
+  },
+  "production": {
+    "build_command": "cargo build --release"
+  },
+  "safety_class": "t1_filesystem",
+  "spec_version": "1",
+  "tags": [
+    "maritime",
+    "backend",
+    "postgres",
+    "vessel",
+    "port-call"
+  ],
+  "version": "0.1.0"
+}

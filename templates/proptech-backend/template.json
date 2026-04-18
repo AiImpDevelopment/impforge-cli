@@ -1,0 +1,35 @@
+{
+  "category": "backend",
+  "compliance": [
+    "FAIR-HOUSING",
+    "FCRA",
+    "GDPR",
+    "CCPA",
+    "SOC2"
+  ],
+  "description": "Postgres 17 backend with proptech seed migration (portfolio, unit, lease, rent_ledger) for Fair Housing-aware property management.",
+  "framework": "rust-1.95",
+  "id": "proptech-backend",
+  "industry": "proptech",
+  "language": "rust",
+  "license": "MIT",
+  "name": "PropTech Backend (Postgres 17)",
+  "preview": {
+    "command": "cargo run",
+    "ready_timeout": 30000,
+    "ready_url": "http://localhost:8080"
+  },
+  "production": {
+    "build_command": "cargo build --release"
+  },
+  "safety_class": "t1_filesystem",
+  "spec_version": "1",
+  "tags": [
+    "proptech",
+    "backend",
+    "postgres",
+    "lease",
+    "rent"
+  ],
+  "version": "0.1.0"
+}

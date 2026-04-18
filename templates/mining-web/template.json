@@ -1,0 +1,36 @@
+{
+  "category": "web",
+  "compliance": [
+    "MSHA",
+    "ICMM",
+    "GISTM",
+    "EITI",
+    "ISO-14001",
+    "WCAG"
+  ],
+  "description": "Vue 3.5 + Tailwind 4 + Ark UI scaffold for mining operations dashboards, tailings monitoring, and shift reports with MSHA + ICMM + GISTM awareness.",
+  "framework": "vue-3.5",
+  "id": "mining-web",
+  "industry": "mining",
+  "language": "typescript",
+  "license": "MIT",
+  "name": "Mining Operations Web (Vue 3.5)",
+  "preview": {
+    "command": "bun install && bun run dev",
+    "ready_timeout": 30000,
+    "ready_url": "http://localhost:5173"
+  },
+  "production": {
+    "build_command": "bun run build"
+  },
+  "safety_class": "t1_filesystem",
+  "spec_version": "1",
+  "tags": [
+    "mining",
+    "web",
+    "vue-3.5",
+    "operations",
+    "tailings"
+  ],
+  "version": "0.1.0"
+}
