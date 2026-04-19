@@ -110,9 +110,7 @@ fn probe_stdio(manifest: &McpServerManifest, timeout_ms: u64, outcome: &mut Prob
     };
 
     // Write JSON-RPC initialize frame.
-    let init_payload = format!(
-        r#"{{"jsonrpc":"2.0","method":"initialize","id":1,"params":{{"protocolVersion":"2024-11-05","capabilities":{{}},"clientInfo":{{"name":"impforge-cli-probe","version":"0.1"}}}}}}"#
-    );
+    let init_payload = r#"{"jsonrpc":"2.0","method":"initialize","id":1,"params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"impforge-cli-probe","version":"0.1"}}}"#.to_string();
 
     if let Some(mut stdin) = child.stdin.take() {
         let frame = format!("{init_payload}\n");

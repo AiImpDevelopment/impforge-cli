@@ -270,7 +270,7 @@ fn validate_command(m: &McpServerManifest, r: &mut ValidationReport) {
                 r.issues.push("stdio transport missing command".to_string());
                 return;
             };
-            if !ALLOWED_COMMANDS.iter().any(|a| *a == cmd) {
+            if !ALLOWED_COMMANDS.contains(&cmd) {
                 r.issues.push(format!(
                     "command '{cmd}' not in allowlist ({})",
                     ALLOWED_COMMANDS.join(" / ")

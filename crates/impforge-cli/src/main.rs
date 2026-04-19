@@ -101,6 +101,10 @@ enum Command {
     #[command(subcommand)]
     Remote(commands::remote::RemoteCmd),
 
+    /// Multi-provider BYOK chat (OpenAI / Anthropic / Gemini / Ollama / OpenRouter).
+    #[command(subcommand)]
+    Provider(commands::provider::ProviderCmd),
+
     /// Launch the futuristic TUI dashboard.
     #[cfg(feature = "tui")]
     Tui,
@@ -141,6 +145,7 @@ fn main() -> anyhow::Result<()> {
         Command::CrownJewel(cmd) => commands::crown_jewel::run(cmd, &orchestrator)?,
         Command::Bench(cmd) => commands::bench::run(cmd, &orchestrator)?,
         Command::Remote(cmd) => commands::remote::run(cmd, &orchestrator)?,
+        Command::Provider(cmd) => commands::provider::run(cmd, &orchestrator)?,
         #[cfg(feature = "tui")]
         Command::Tui => commands::tui::run(&orchestrator)?,
     }

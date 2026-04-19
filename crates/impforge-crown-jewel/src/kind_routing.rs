@@ -107,7 +107,7 @@ pub fn scan_rust_file(path: &Path, content: &str) -> Vec<CrownJewelFinding> {
             continue;
         };
         let fn_name_token = after_fn.split(['(', '<', ' ']).next().unwrap_or("");
-        if !DISPATCH_FN_NAMES.iter().any(|n| fn_name_token == *n) {
+        if !DISPATCH_FN_NAMES.contains(&fn_name_token) {
             continue;
         }
         let body_end = (i + 25).min(lines.len());
