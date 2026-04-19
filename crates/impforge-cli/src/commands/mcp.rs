@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 //! `impforge-cli mcp` subcommand.
 
+use crate::commands::mcp_marketplace::{self, McpMarketplaceCmd};
 use crate::theme;
 use clap::Subcommand;
 use impforge_emergence::Orchestrator;
@@ -18,6 +19,20 @@ pub enum McpCmd {
     Clients,
     /// Start the stdio MCP server (run from your AI tool's config).
     Serve,
+    /// Browse the local-first MCP marketplace mirror.
+    Browse(mcp_marketplace::BrowseArgs),
+    /// Install an MCP server by id.
+    Install(mcp_marketplace::InstallArgs),
+    /// Remove a previously-installed MCP server.
+    Uninstall { id: String },
+    /// List installed MCP servers.
+    Installed,
+    /// Health-check an installed MCP server (stdio probe).
+    Health { id: String },
+    /// Open `$EDITOR` on a server's per-user config JSON.
+    Configure { id: String },
+    /// Sync the marketplace mirror from the public CDN.
+    Update(mcp_marketplace::UpdateArgs),
 }
 
 pub fn run(cmd: McpCmd, _orc: &Arc<Orchestrator>) -> anyhow::Result<()> {
@@ -26,6 +41,13 @@ pub fn run(cmd: McpCmd, _orc: &Arc<Orchestrator>) -> anyhow::Result<()> {
         McpCmd::Register { client } => register(&client)?,
         McpCmd::Clients => clients(),
         McpCmd::Serve => serve()?,
+        McpCmd::Browse(args) => mcp_marketplace::run(McpMarketplaceCmd::Browse(args))?,
+        McpCmd::Install(args) => mcp_marketplace::run(McpMarketplaceCmd::Install(args))?,
+        McpCmd::Uninstall { id } => mcp_marketplace::run(McpMarketplaceCmd::Uninstall { id })?,
+        McpCmd::Installed => mcp_marketplace::run(McpMarketplaceCmd::Installed)?,
+        McpCmd::Health { id } => mcp_marketplace::run(McpMarketplaceCmd::Health { id })?,
+        McpCmd::Configure { id } => mcp_marketplace::run(McpMarketplaceCmd::Configure { id })?,
+        McpCmd::Update(args) => mcp_marketplace::run(McpMarketplaceCmd::Update(args))?,
     }
     Ok(())
 }

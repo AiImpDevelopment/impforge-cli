@@ -14,6 +14,7 @@ pub mod digest;
 pub mod ingest;
 pub mod introspect;
 pub mod mcp;
+pub mod mcp_marketplace;
 pub mod model;
 pub mod provider;
 pub mod remote;
