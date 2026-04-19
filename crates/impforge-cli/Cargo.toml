@@ -65,3 +65,24 @@ crossterm = { workspace = true, optional = true }
 genai = "0.5"
 keyring = { version = "3", features = ["apple-native", "windows-native", "sync-secret-service"] }
 futures = { workspace = true }
+
+# Document Upload + RAG — Feature 2 (Tier 1).
+# - `rusqlite` 0.39 ships SQLite 3.46+ with the FTS5 extension built into
+#   the `bundled` source — there's no separate `fts5` feature flag.  We
+#   ALSO enable `vtab` (used by FTS5 internally) and `modern_sqlite` to
+#   get the latest BM25 implementation.
+# - `lopdf` = pure-Rust PDF parser (no native FFI, perfect for cargo-install
+#   on every platform).  We keep PDF support to lopdf only at Tier 1 — the
+#   App tier adds pdfium-render for pixel-perfect citation previews.
+# - `pulldown-cmark` = CommonMark + GFM parser, used to strip Markdown to
+#   plain text before chunking.
+# - `walkdir` already in workspace, used for `--recursive` ingest.
+# - `sha2` already in workspace, used for content-hash deduplication.
+rusqlite = { version = "0.39", features = ["bundled", "vtab", "modern_sqlite"] }
+lopdf = "0.40"
+pulldown-cmark = "0.13"
+sha2 = { workspace = true }
+walkdir = { workspace = true }
+
+[dev-dependencies]
+tempfile = { workspace = true }

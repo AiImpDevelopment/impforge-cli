@@ -105,6 +105,12 @@ enum Command {
     #[command(subcommand)]
     Provider(commands::provider::ProviderCmd),
 
+    /// Index a file or directory into the local FTS5 knowledge base.
+    Ingest(commands::ingest::IngestArgs),
+
+    /// Search the local FTS5 knowledge base (BM25 ranked).
+    Search(commands::search::SearchArgs),
+
     /// Launch the futuristic TUI dashboard.
     #[cfg(feature = "tui")]
     Tui,
@@ -146,6 +152,8 @@ fn main() -> anyhow::Result<()> {
         Command::Bench(cmd) => commands::bench::run(cmd, &orchestrator)?,
         Command::Remote(cmd) => commands::remote::run(cmd, &orchestrator)?,
         Command::Provider(cmd) => commands::provider::run(cmd, &orchestrator)?,
+        Command::Ingest(args) => commands::ingest::run(args, &orchestrator)?,
+        Command::Search(args) => commands::search::run(args, &orchestrator)?,
         #[cfg(feature = "tui")]
         Command::Tui => commands::tui::run(&orchestrator)?,
     }
