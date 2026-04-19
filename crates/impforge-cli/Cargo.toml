@@ -93,5 +93,21 @@ feed-rs = { workspace = true }
 url = { workspace = true }
 reqwest = { workspace = true }
 
+# Code Interpreter Sandbox — Feature 5 (Tier 1).
+# - `wasmtime` 27 = stable WASI-preview-2 runtime, MSRV 1.80 (matches
+#   workspace).  We deliberately stay on 27.x to keep the CLI installable
+#   on older toolchains; impforge-app upgrades to 43.x for WASIp3
+#   stream/future support.
+# - `wasmtime-wasi` 27 = matched WASI bindings (preopen filesystems,
+#   stdin/stdout/stderr, environment).  We use only the basic preview-2
+#   surface — fuel for CPU limits, memory_size_max for RAM.
+# - License: Apache-2.0 WITH LLVM-exception (MIT-compatible).
+wasmtime = { version = "27", default-features = false, features = ["runtime", "wat", "cranelift", "std"] }
+wasmtime-wasi = "27"
+
 [dev-dependencies]
 tempfile = { workspace = true }
+# `wat` 1 = WebAssembly Text → binary compiler.  Used in unit tests
+# to inline tiny no-op / fuel-bomb / memory-bomb modules without
+# shipping any binary fixture file.
+wat = "1"

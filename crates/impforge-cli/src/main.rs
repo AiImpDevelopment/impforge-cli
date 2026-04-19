@@ -115,6 +115,17 @@ enum Command {
     #[command(subcommand)]
     Digest(commands::digest::DigestCmd),
 
+    /// Code interpreter sandbox — execute Python/Wasm in wasmtime with
+    /// hard CPU + memory limits.  No network, no filesystem unless
+    /// `--mount`.  Free preview of impforge-app's Jupyter UI and Pro's
+    /// Firecracker microVM warm-pool.
+    Exec(commands::exec::ExecArgs),
+
+    /// Download the Pyodide WASM blob (~30 MiB) into the local cache.
+    /// One-time setup; subsequent `exec --lang python` calls hit the
+    /// cache.
+    DownloadPyodide,
+
     /// Launch the futuristic TUI dashboard.
     #[cfg(feature = "tui")]
     Tui,
@@ -159,6 +170,10 @@ fn main() -> anyhow::Result<()> {
         Command::Ingest(args) => commands::ingest::run(args, &orchestrator)?,
         Command::Search(args) => commands::search::run(args, &orchestrator)?,
         Command::Digest(cmd) => commands::digest::run(cmd, &orchestrator)?,
+        Command::Exec(args) => commands::exec::run(args, &orchestrator)?,
+        Command::DownloadPyodide => {
+            commands::exec::download_pyodide_blocking()?;
+        }
         #[cfg(feature = "tui")]
         Command::Tui => commands::tui::run(&orchestrator)?,
     }

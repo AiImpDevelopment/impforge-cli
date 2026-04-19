@@ -11,6 +11,7 @@ pub mod doctor;
 pub mod export;
 pub mod generate;
 pub mod digest;
+pub mod exec;
 pub mod ingest;
 pub mod introspect;
 pub mod mcp;
