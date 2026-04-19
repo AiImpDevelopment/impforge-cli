@@ -111,6 +111,10 @@ enum Command {
     /// Search the local FTS5 knowledge base (BM25 ranked).
     Search(commands::search::SearchArgs),
 
+    /// Global Digest — auto-ingest from RSS feeds + watched folders.
+    #[command(subcommand)]
+    Digest(commands::digest::DigestCmd),
+
     /// Launch the futuristic TUI dashboard.
     #[cfg(feature = "tui")]
     Tui,
@@ -154,6 +158,7 @@ fn main() -> anyhow::Result<()> {
         Command::Provider(cmd) => commands::provider::run(cmd, &orchestrator)?,
         Command::Ingest(args) => commands::ingest::run(args, &orchestrator)?,
         Command::Search(args) => commands::search::run(args, &orchestrator)?,
+        Command::Digest(cmd) => commands::digest::run(cmd, &orchestrator)?,
         #[cfg(feature = "tui")]
         Command::Tui => commands::tui::run(&orchestrator)?,
     }

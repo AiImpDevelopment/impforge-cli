@@ -84,5 +84,14 @@ pulldown-cmark = "0.13"
 sha2 = { workspace = true }
 walkdir = { workspace = true }
 
+# Global Digest — Feature 3 (Tier 1).  See workspace.dependencies for
+# rationale.  `reqwest` carries the RSS HTTP fetch (feed-rs parses bytes
+# in-memory; it does NOT do its own network I/O).
+notify = { workspace = true }
+notify-debouncer-full = { workspace = true }
+feed-rs = { workspace = true }
+url = { workspace = true }
+reqwest = { workspace = true }
+
 [dev-dependencies]
 tempfile = { workspace = true }

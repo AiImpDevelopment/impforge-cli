@@ -78,6 +78,20 @@ ollama-rs = "0.2"
 hf-hub = "0.3"
 # llama_cpp and candle are opt-in via feature flags inside impforge-models
 
+# Global Digest — Feature 3 (Tier 1, ~CLI).  All MIT-compatible.
+# - `notify` 8 = stable, cross-platform filesystem watcher.  v9 still RC.
+# - `notify-debouncer-full` 0.7 = batches rapid file events + dedups,
+#   so a single editor save (Modify+Write+Close) doesn't trigger three
+#   ingest passes.  Pinned 0.7 (last stable for notify-8); upstream's
+#   0.8 RC tracks notify-9 RC and we don't follow pre-release toolchains.
+# - `feed-rs` 2 = pure-Rust feed parser handling Atom, RSS 2.0, RSS 1.0,
+#   RSS 0.x, JSON Feed.  No network, just bytes-in / parsed-out.
+# - `url` 2 = WHATWG URL parser, used to validate `add-feed` arguments.
+notify = "8"
+notify-debouncer-full = "0.7"
+feed-rs = "2"
+url = "2"
+
 [profile.release]
 opt-level = 3
 lto = "fat"

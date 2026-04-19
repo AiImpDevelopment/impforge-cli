@@ -10,6 +10,7 @@ pub mod crown_jewel;
 pub mod doctor;
 pub mod export;
 pub mod generate;
+pub mod digest;
 pub mod ingest;
 pub mod introspect;
 pub mod mcp;
