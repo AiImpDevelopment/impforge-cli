@@ -946,21 +946,43 @@ pub fn run(cmd: McpMarketplaceCmd) -> Result<()> {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use std::sync::Mutex;
     use tempfile::TempDir;
+
+    /// Serialize all tests in this module — they share the
+    /// `IMPFORGE_CLI_HOME` env var which would race under default
+    /// `cargo test` parallel execution and produce flaky failures.
+    static ENV_LOCK: Mutex<()> = Mutex::new(());
 
     /// Override $HOME for the duration of one test and return a guard so
     /// the env var resets when the guard drops.  `TempDir` itself ensures
-    /// the directory is removed.
+    /// the directory is removed.  Holds the ENV_LOCK for the lifetime of
+    /// the test, serializing access.
     struct HomeGuard {
         _tmp: TempDir,
         prev: Option<String>,
+        // Box the lock guard so we don't have to name its lifetime — the
+        // guard drops *before* the env-var reset on Drop, which is the
+        // correct order: release the lock only after restoring state.
+        _guard: std::sync::MutexGuard<'static, ()>,
     }
 
     fn set_home() -> HomeGuard {
+        let guard = ENV_LOCK
+            .lock()
+            .unwrap_or_else(|p| {
+                // Lock poisoned by a prior test panic — recover the inner
+                // value and continue.  We never touch the protected `()`.
+                p.into_inner()
+            });
         let tmp = tempfile::tempdir().expect("tempdir");
         let prev = std::env::var("IMPFORGE_CLI_HOME").ok();
         std::env::set_var("IMPFORGE_CLI_HOME", tmp.path());
-        HomeGuard { _tmp: tmp, prev }
+        HomeGuard {
+            _tmp: tmp,
+            prev,
+            _guard: guard,
+        }
     }
 
     impl Drop for HomeGuard {
